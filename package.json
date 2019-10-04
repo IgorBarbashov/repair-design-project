@@ -1,0 +1,33 @@
+{
+  "name": "repair-design-project",
+  "version": "1.0.0",
+  "description": "RS-school homework: repair-design-project. Difficulty Level 3.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorBarbashov/repair-design-project.git"
+  },
+  "author": "Igor Barbashov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorBarbashov/repair-design-project/issues"
+  },
+  "homepage": "https://github.com/IgorBarbashov/repair-design-project#readme",
+  "dependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "csscomb": "^4.3.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "htmlhint": "^0.11.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  }
+}
