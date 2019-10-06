@@ -1,7 +1,7 @@
 {
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
