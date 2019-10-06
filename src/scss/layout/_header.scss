@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+
+// ????? - maybe in percent or max-height
+  height: 83px;
+
+// !! delete
+  overflow: hidden;
+
+  background: $bg-d;
+  border: 1px solid black;
+}
+
+// !! delete
+.header__nav,
+.header__phone {
+  display: none;
+}

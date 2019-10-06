@@ -9,8 +9,9 @@ Prerequisites
 - Use 'npm run build' to convert source's *.scss files to *.css file (it'll create style.css file in '/dist' folder)
 - Open index.html from project's root folder in browser
 
-Developer environment
+Developer environment, methodologies and instruments
 - sass
-- ebpack
-- htmlhit
-- csscomb
+- webpack
+- БЭМ
+- '7-1' pattern
+- htmlhint, csscomb, prettier

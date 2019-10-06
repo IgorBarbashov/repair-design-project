@@ -1,0 +1,15 @@
+.main-offer {
+  width: 100%;
+
+// ????? - maybe in percent or max-height
+  height: 707px;
+
+// !! delete
+
+  background: $bg-l;
+  border: 1px solid black;
+
+  &__actions {
+    display: none;
+  }
+}
