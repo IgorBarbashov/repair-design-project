@@ -8,4 +8,8 @@
 
   background: $bg-l;
   border: 1px solid black;
+
+  @media (max-width: 568px) {
+    background: $bg-lm;
+  }
 }

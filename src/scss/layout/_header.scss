@@ -5,10 +5,13 @@
   height: 83px;
 
 // !! delete
-  overflow: hidden;
 
   background: $bg-d;
   border: 1px solid black;
+
+  @media (max-width: 568px) {
+    background: $bg-dm;
+  }
 }
 
 // !! delete

@@ -1,4 +1,6 @@
 .main-offer {
+  position: relative;
+
   width: 100%;
 
 // ????? - maybe in percent or max-height
@@ -9,7 +11,52 @@
   background: $bg-l;
   border: 1px solid black;
 
+  // !! good
+
+  &__aside {
+    // to mixin
+    position: absolute;
+    top: 0;
+    left: 0;
+
+// to mixin
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 82px;
+    height: 707px;
+
+    background: $bg-c;
+
+    &-action {
+      display: flex;
+      justify-content: space-between;
+      width: 148px;
+      height: 13px;
+
+      transform: rotate(90deg);
+    }
+    &-text {
+      color: $white;
+    }
+    &-line {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
   &__actions {
     display: none;
+  }
+
+  @media (max-width: 568px) {
+    .main-offer {
+      background: $bg-lm;
+      &__aside {
+        display: none;
+      }
+    }
   }
 }
