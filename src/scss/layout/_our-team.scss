@@ -1,0 +1,15 @@
+.our-team {
+  width: 100%;
+
+// ????? - maybe in percent or max-height
+  height: 445px;
+
+// !! delete
+
+  background: $bg-l;
+  border: 1px solid black;
+
+  @media (max-width: 568px) {
+    background: $bg-lm;
+  }
+}

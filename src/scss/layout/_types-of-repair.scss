@@ -1,0 +1,15 @@
+.types-of-repair {
+  width: 100%;
+
+// ????? - maybe in percent or max-height
+  height: 885px;
+
+// !! delete
+
+  background: $bg-d;
+  border: 1px solid black;
+
+  @media (max-width: 568px) {
+    background: $bg-dm;
+  }
+}
