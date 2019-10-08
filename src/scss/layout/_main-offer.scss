@@ -1,12 +1,10 @@
 .main-offer {
   position: relative;
 
-  width: 100%;
-
-// ????? - maybe in percent or max-height
+  width: 100%; //ok
+  // ????? - maybe in percent or max-height
   height: 707px;
-
-// !! delete
+  // !! delete
 
   background: $bg-l;
   border: 1px solid black;
@@ -18,8 +16,7 @@
     position: absolute;
     top: 0;
     left: 0;
-
-// to mixin
+    // to mixin
 
     display: flex;
     justify-content: center;
