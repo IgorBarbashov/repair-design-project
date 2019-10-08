@@ -14,22 +14,24 @@
         <nav class="header__nav">
           <ul class="header__nav-items">
             <li class="header__nav-item">
-              <a class="header__nav-link_active" href="">HOME</a>
+              <a class="header__nav-link_active" href="#main-offer">HOME</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="">PROJECTS</a>
+              <a class="header__nav-link" href="#completed-projects"
+                >PROJECTS</a
+              >
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="">MEASUREMENT</a>
+              <a class="header__nav-link" href="#metering">MEASUREMENT</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="">TEAM</a>
+              <a class="header__nav-link" href="#our-team">TEAM</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="">REVIEWS</a>
+              <a class="header__nav-link" href="#our-clients">REVIEWS</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="">CONTACTS</a>
+              <a class="header__nav-link" href="#contacts">CONTACTS</a>
             </li>
           </ul>
         </nav>
@@ -40,35 +42,40 @@
           <button class="header__req-call">Request a call</button>
         </div>
       </header>
+
       <main class="main">
-        <section class="main-offer">
-          <div class="main-offer__description">
-            <div class="main-offer__text">
-              <div class="main-offer__title"><h2></h2></div>
-              <div class="main-offer__advantages"></div>
-            </div>
-            <div class="main-offer__actions">
-              <button class="main-offer__button_highlight"></button>
-              <button class="main-offer__button"></button>
-            </div>
-          </div>
+        <section class="main-offer" id="main-offer">
           <aside class="main-offer__aside">
             <div class="main-offer__aside-action">
               <div class="main-offer__aside-text">INSTAGRAM</div>
               <div class="main-offer__aside-line"></div>
             </div>
           </aside>
+          <div class="main-offer__background">
+            <div class="main-offer__description">
+              <div class="main-offer__text">
+                <div class="main-offer__title"><h2></h2></div>
+                <div class="main-offer__advantages"></div>
+              </div>
+              <div class="main-offer__actions">
+                <button class="main-offer__button_highlight"></button>
+                <button class="main-offer__button"></button>
+              </div>
+            </div>
+          </div>
           <div class="main-offer__scroll-down"></div>
         </section>
 
         <!-- optional: fingerprint & city on background-->
-        <section class="completed-projects">completed-projects</section>
+        <section class="completed-projects" id="completed-projects">
+          completed-projects
+        </section>
 
         <!-- optional: fingerprint on background-->
         <div class="fingerprint">
           <section class="online-control">online-control</section>
           <section class="types-of-repair">types-of-repair</section>
-          <section class="metering">metering</section>
+          <section class="metering" id="metering">metering</section>
         </div>
 
         <section class="design-styles">design-styles</section>
@@ -77,11 +84,11 @@
 
         <section class="how-working">how-working</section>
 
-        <section class="our-team">our-team</section>
+        <section class="our-team" id="our-team">our-team</section>
 
-        <section class="our-clients">our-clients</section>
+        <section class="our-clients" id="our-clients">our-clients</section>
 
-        <section class="contacts">contacts</section>
+        <section class="contacts" id="contacts">contacts</section>
       </main>
 
       <footer class="footer">footer</footer>

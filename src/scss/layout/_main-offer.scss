@@ -1,59 +1,31 @@
 .main-offer {
-  position: relative;
-
-  width: 100%; //ok
+  display: flex;
+  width: 100%;
   // ????? - maybe in percent or max-height
   height: 707px;
-  // !! delete
-
-  background: $bg-l;
-  border: 1px solid black;
-
-  // !! good
 
   &__aside {
-    // to mixin
-    position: absolute;
-    top: 0;
-    left: 0;
-    // to mixin
+    width: 6%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 82px;
-    height: 707px;
-
-    background: $bg-c;
-
-    &-action {
-      display: flex;
-      justify-content: space-between;
-      width: 148px;
-      height: 13px;
-
-      transform: rotate(90deg);
-    }
-    &-text {
-      color: $white;
-    }
-    &-line {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-    }
+    background: $bg-main;
   }
+  // &__aside-action {}
+  // &__aside-text {}
+  // &__aside-line {}
+  &__background {
+    width: 94%;
 
-  &__actions {
-    display: none;
+    background-image: url("../../assets/images/main-offer-d.png");
+    background-repeat: none;
+    background-size: cover;
   }
-
-  @media (max-width: 568px) {
-    .main-offer {
-      background: $bg-lm;
-      &__aside {
-        display: none;
-      }
-    }
-  }
+  // &__description {}
+  // &__text {}
+  // &__title {}
+  // &__advantages {}
+  // &__actions {}
+  // &__button {
+  //   &_highlight {}
+  // }
+  // &__scroll-down {}
 }
