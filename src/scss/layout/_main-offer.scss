@@ -1,31 +1,137 @@
 .main-offer {
+  position: relative;
+
   display: flex;
   width: 100%;
-  // ????? - maybe in percent or max-height
   height: 707px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "FuturaDemiC", sans-serif;
+  color: $white;
 
   &__aside {
     width: 6%;
 
-    background: $bg-main;
-  }
-  // &__aside-action {}
-  // &__aside-text {}
-  // &__aside-line {}
-  &__background {
-    width: 94%;
+    color: $gold;
 
-    background-image: url("../../assets/images/main-offer-d.png");
-    background-repeat: none;
-    background-size: cover;
+    background: $bg-main;
+
+    @include flex-cc(row);
   }
-  // &__description {}
-  // &__text {}
-  // &__title {}
-  // &__advantages {}
-  // &__actions {}
-  // &__button {
-  //   &_highlight {}
-  // }
-  // &__scroll-down {}
+
+  &__aside-action {
+    transform: rotate(90deg);
+    cursor: pointer;
+
+    @include flex-cc(row);
+  }
+
+  &__aside-line {
+    width: 51px;
+    margin-left: 8px;
+
+    border: 1px solid $gold;
+  }
+
+  &__background {
+    width: 95%;
+    padding-left: 5%;
+
+    background: #000000b3;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.702),
+    rgba(0, 0, 0, 0.702)
+    ),
+    url("../../assets/images/main-offer-d.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include flex-sc(row);
+  }
+
+  &__description {
+    width: 50%;
+  }
+
+  &__text {
+    @include flex-bs(column);
+  }
+
+  &__title {
+    width: 85%;
+
+    h2 {
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 53px;
+      font-family: "Yeseva One", cursive;
+      text-transform: uppercase;
+    }
+
+    &_gold {
+      color: $gold;
+    }
+  }
+
+  &__advantages {
+    width: 70%;
+    margin-top: 3%;
+
+    font-size: 22px;
+    line-height: 30px;
+    font-family: "FuturaBookC", sans-serif;
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: 6%;
+  }
+
+  &__button {
+    width: 31%;
+    height: 51px;
+    margin-right: 3%;
+
+    color: $white;
+
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid $white;
+    border-radius: 2px;
+
+    &_highlight {
+      background: $gold;
+      border: 0;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+    }
+  }
+  &__scroll-down {
+    position: absolute;
+    bottom: -49px;
+    left: 0;
+
+    width: 17%;
+    height: 97px;
+
+    background: $bg-main;
+
+    @include flex-cc(row);
+
+    &-wrapper {
+      width: 61%;
+
+      cursor: pointer;
+
+      @include flex-bc(row);
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 19px;
+      font-family: Yeseva One;
+      text-transform: uppercase;
+    }
+  }
 }
