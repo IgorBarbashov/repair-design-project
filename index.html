@@ -240,6 +240,7 @@
                       id="form-inputs__name"
                       name="form-inputs__name"
                       type="text"
+                      required
                       placeholder="What is your name:"
                     />
                   </div>
@@ -248,7 +249,9 @@
                     <input
                       id="form-inputs__phone"
                       name="form-inputs__phone"
-                      type="text"
+                      type="tel"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      required
                       placeholder="Your phone number:"
                     />
                   </div>
@@ -275,8 +278,6 @@
             </div>
           </div>
         </section>
-
-        <!-- current -->
         <section class="types-of-repair">
           <div class="types-of-repair__title"><h2>TYPES OF REPAIR</h2></div>
           <div class="types-of-repair__icon">
@@ -361,9 +362,86 @@
             </div>
           </div>
         </section>
-        <!-- current -->
 
-        <section class="metering" id="metering">metering</section>
+        <!-- current -->
+        <section class="metering" id="metering">
+          <div class="metering__stages"></div>
+          <div class="metering__request">
+            <div class="metering__request-form request-form">
+              <form action="#" method="post">
+                <div class="request-form__title">
+                  Leave a request for free departure of the measurer
+                </div>
+                <div class="request-form__inputs">
+                  <div class="request-form__input">
+                    <label for="request-form__name">Name</label>
+                    <input
+                      id="request-form__name"
+                      name="request-form__name"
+                      type="text"
+                      required
+                      placeholder="What is your name:"
+                    />
+                  </div>
+
+                  <div class="request-form__input">
+                    <label for="request-form__phone">Phone</label>
+                    <input
+                      id="request-form__phone"
+                      name="request-form__phone"
+                      type="tel"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      required
+                      placeholder="Your phone number:"
+                    />
+                  </div>
+
+                  <div class="request-form__input">
+                    <label for="request-form__email">Email</label>
+                    <input
+                      id="request-form__email"
+                      name="request-form__email"
+                      type="email"
+                      required
+                      placeholder="Your email"
+                    />
+                  </div>
+
+                  <div class="request-form__checkbox">
+                    <label for="request-form__checkbox">
+                      <input
+                        type="checkbox"
+                        id="request-form__checkbox"
+                        name="request-form__checkbox"
+                        reqiured
+                        checked
+                      />
+                      <div class="request-form__checkbox-label">
+                        I agree to the processing of personal data
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="request-form__button">
+                  <button type="submit">Call the measurer</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="metering__request-tizer request-tizer">
+              <div class="request-tizer__icon">
+                <img
+                  src="../../assets/images/desktop/metering-request-icon.svg"
+                  alt="Save up by materials cost"
+                />
+              </div>
+              <div class="request-tizer__text">
+                Help save 10 - 20% of the cost of materials
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- current -->
 
         <section class="design-styles">design-styles</section>
 

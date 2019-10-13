@@ -46,3 +46,10 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+@mixin flex-ss($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
