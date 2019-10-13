@@ -8,7 +8,7 @@
     <title>Repair Design project</title>
   </head>
   <body>
-    <div class="container">
+    <section class="container">
       <header class="header">
         <h1 class="header__name">IC "Repair Design Project"</h1>
         <nav class="header__nav">
@@ -192,13 +192,178 @@
             </div>
           </div>
         </section>
+        <section class="online-control" id="online-control">
+          <div class="online-control__title"><h2>online control</h2></div>
+          <div class="online-control__icon">
+            <div class="online-control__icon-line"></div>
+            <img
+              src="../../assets/images/desktop/video-control-icon.svg"
+              alt="Video-control"
+            />
+            <div class="online-control__icon-line"></div>
+          </div>
+          <div class="online-control_mixed-background">
+            <div class="online-control__video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/H-YqFhl7rlg?start=2"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="online-control__video-action">
+                <img
+                  src="../../assets/images/desktop/online-arrow-play.svg"
+                  alt="Play"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="online-control_white-background">
+            <div class="online-control__separator"></div>
+            <div class="online-control__offer">
+              <p>
+                At each facility, a camera is installed that broadcasts the
+                progress of work on the clock. At any time, you can go to our
+                website and monitor the progress of work in your apartment. You
+                can watch the live broadcast from one of our facilities! Leave a
+                request below and you will receive a link to the broadcast.
+              </p>
+            </div>
+            <div class="online-control__form">
+              <form action="#" method="post">
+                <div class="online-control__form-inputs form-inputs">
+                  <div class="form-inputs__name">
+                    <label for="form-inputs__name">Name</label>
+                    <input
+                      id="form-inputs__name"
+                      name="form-inputs__name"
+                      type="text"
+                      placeholder="What is your name:"
+                    />
+                  </div>
+                  <div class="form-inputs__phone">
+                    <label for="form-inputs__phone">Phone</label>
+                    <input
+                      id="form-inputs__phone"
+                      name="form-inputs__phone"
+                      type="text"
+                      placeholder="Your phone number:"
+                    />
+                  </div>
+                  <div class="form-inputs__submit">
+                    <button type="submit">Submit</button>
+                  </div>
+                </div>
+                <div class="online-control__form-checkbox form-checkbox">
+                  <label class="form-checkbox" for="form-checkbox">
+                    <input
+                      class="form-checkbox__input"
+                      type="checkbox"
+                      id="form-checkbox"
+                      name="form-checkbox"
+                      reqiured
+                      checked
+                    />
+                    <div class="form-checkbox__label">
+                      I agree to the processing of personal data
+                    </div>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
 
-        <!-- optional: fingerprint on background-->
-        <div class="fingerprint">
-          <section class="online-control">online-control</section>
-          <section class="types-of-repair">types-of-repair</section>
-          <section class="metering" id="metering">metering</section>
-        </div>
+        <!-- current -->
+        <section class="types-of-repair">
+          <div class="types-of-repair__title"><h2>TYPES OF REPAIR</h2></div>
+          <div class="types-of-repair__icon">
+            <div class="types-of-repair__icon-line"></div>
+            <img
+              src="../../assets/images/desktop/types-of-repair-icon.svg"
+              alt="Types of repair"
+            />
+            <div class="types-of-repair__icon-line"></div>
+          </div>
+          <div class="types-of-repair__types">
+            <div class="types-of-repair__type repair-type">
+              <img
+                src="../../assets/images/desktop/types-of-repair-redecorating.png"
+                alt="Redecorating"
+              />
+              <div class="repair-type__cost">
+                from 900 rub / m2
+              </div>
+              <div class="repair-type__description">
+                <div class="description__title">Redecorating</div>
+                <ul class="description__items">
+                  <li class="description__item">Dismantling of old coatings</li>
+                  <li class="description__item">Wallpapering</li>
+                  <li class="description__item">Painting walls and ceilings</li>
+                  <li class="description__item">Laying flooring</li>
+                  <li class="description__item">Replacing plumbing</li>
+                  <li class="description__item">
+                    Replacing sockets and switches
+                  </li>
+                  <li class="description__item">Replacing doors</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="types-of-repair__type repair-type">
+              <img
+                src="../../assets/images/desktop/types-of-repair-overhaul.png"
+                alt="Overhaul"
+              />
+              <div class="repair-type__cost">
+                from 1800 rub / m2
+              </div>
+              <div class="repair-type__description description">
+                <div class="description__title">Overhaul</div>
+                <ul class="description__items">
+                  <li class="description__item">Dismantling of old coatings</li>
+                  <li class="description__item">Wallpapering</li>
+                  <li class="description__item">Painting walls and ceilings</li>
+                  <li class="description__item">Laying flooring</li>
+                  <li class="description__item">Replacing plumbing</li>
+                  <li class="description__item">
+                    Replacing sockets and switches
+                  </li>
+                  <li class="description__item">Replacing doors</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="types-of-repair__type repair-type">
+              <img
+                src="../../assets/images/desktop/types-of-repair-designer-repair.png"
+                alt="Designer Repair"
+              />
+              <div class="repair-type__cost">
+                from 4000 rub / m2
+              </div>
+              <div class="repair-type__description">
+                <div class="description__title">Designer Repair</div>
+                <ul class="description__items">
+                  <li class="description__item">Dismantling of old coatings</li>
+                  <li class="description__item">Wallpapering</li>
+                  <li class="description__item">Painting walls and ceilings</li>
+                  <li class="description__item">Laying flooring</li>
+                  <li class="description__item">Replacing plumbing</li>
+                  <li class="description__item">
+                    Replacing sockets and switches
+                  </li>
+                  <li class="description__item">Replacing doors</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- current -->
+
+        <section class="metering" id="metering">metering</section>
 
         <section class="design-styles">design-styles</section>
 
@@ -214,6 +379,6 @@
       </main>
 
       <footer class="footer">footer</footer>
-    </div>
+    </section>
   </body>
 </html>

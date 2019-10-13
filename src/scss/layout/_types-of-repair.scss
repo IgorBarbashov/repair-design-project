@@ -1,15 +1,100 @@
 .types-of-repair {
   width: 100%;
+  padding-top: 148px;
 
-// ????? - maybe in percent or max-height
-  height: 885px;
+  background: $white;
 
-// !! delete
+@include flex-sc(column);
 
-  background: $bg-d;
-  border: 1px solid black;
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $bg-footer;
+    text-transform: uppercase;
+  }
 
-  @media (max-width: 568px) {
-    background: $bg-dm;
+  &__icon {
+    width: 8%;
+    margin-top: 13px;
+
+@include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__types {
+    width: 86%;
+    height: 608px;
+    margin-top: 31px;
+
+@include flex-bs(row);
+  }
+
+  &__type {
+    width: 31.5%;
+    height: 100%;
+
+    &.repair-type {
+      position: relative;
+
+@include flex-bc(column);
+    }
+
+    & .repair-type {
+      &__cost {
+        z-index: 1;
+
+        align-self: start;
+        width: 58%;
+        height: 54px;
+        margin-left: 8%;
+
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Yeseva One", cursive;
+        color: $white;
+        text-transform: uppercase;
+
+        background: $gold;
+
+@include flex-cc(row);
+      }
+
+      &__description {
+        position: absolute;
+        bottom: 27px;
+
+        width: 84%;
+        height: 286px;
+        padding-top: 25px;
+        padding-left: 9%;
+
+        background: $white;
+
+        & .description {
+          &__title {
+            font-size: 18px;
+            line-height: 25px;
+            font-family: "Yeseva One", cursive;
+            color: $txt-grey-dark;
+          }
+
+          &__items {
+            margin-top: 13px;
+
+            list-style-position: inside;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $txt-grey-middle;
+          }
+        }
+      }
+    }
   }
 }

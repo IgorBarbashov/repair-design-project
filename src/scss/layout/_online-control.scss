@@ -1,15 +1,217 @@
 .online-control {
   width: 100%;
+  padding-top: 92px;
 
-// ????? - maybe in percent or max-height
-  height: 725px;
+  background: $bg-main;
 
-// !! delete
+@include flex-sc(column);
 
-  background: $bg-l;
-  border: 1px solid black;
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $white;
+    text-transform: uppercase;
+  }
 
-  @media (max-width: 568px) {
-    background: $bg-lm;
+  &__icon {
+    width: 8%;
+    margin-top: 13px;
+    margin-bottom: 31px;
+
+@include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &_mixed-background {
+    width: 100%;
+
+    background: linear-gradient(to bottom, $bg-main 50%, $white 50%);
+
+@include flex-sc(column);
+  }
+
+  &_white-background {
+    background: $white;
+
+@include flex-sc(column);
+  }
+
+  &__video {
+    position: relative;
+
+    width: 57%;
+    height: 434px;
+
+    & iframe {
+      & + .online-control__video-action {
+        transition: opacity 0.3s;
+      }
+      &:hover {
+        & + .online-control__video-action {
+          opacity: 0;
+        }
+      }
+    }
+
+    &-action {
+      position: absolute;
+      top: calc(50% - 85px / 2);
+      left: calc(50% - 85px / 2);
+
+      width: 85px;
+      height: 85px;
+
+      background: $gold;
+      border-radius: 50%;
+      box-shadow: 0 5px 30px rgba(227, 184, 115, 0.2);
+      cursor: pointer;
+
+@include flex-cc(row);
+
+      & img {
+        position: relative;
+        left: 3px;
+      }
+    }
+  }
+
+  &__separator {
+    width: 4%;
+    height: 10px;
+    margin-top: 62px;
+
+    border-top: 1px solid $gold;
+  }
+
+  &__offer {
+    width: 47%;
+    margin-top: 34px;
+
+    font-size: 20px;
+    line-height: 34px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $txt-grey-dark;
+  }
+
+  &__form {
+    width: 53%;
+    margin-top: 91px;
+
+    &-inputs {
+      height: 51px;
+
+@include flex-bs(row);
+
+      &.form-inputs {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: "FuturaBookC", sans-serif;
+
+        & label {
+          font-size: 15px;
+          line-height: 20px;
+          font-family: "FuturaBookC", sans-serif;
+          color: $txt-grey-light;
+        }
+
+        & ::placeholder {
+          color: $txt-grey-dark;
+        }
+      }
+
+      & .form-inputs {
+        &__name,
+        &__phone {
+          width: 30%;
+          height: 100%;
+          padding-bottom: 8px;
+
+          border-bottom: 1px solid $txt-grey-input-line;
+
+@include flex-bs(column);
+
+          & input {
+            border: 0;
+          }
+        }
+
+        &__submit {
+          width: 26%;
+          height: 100%;
+
+@include flex-cc(row);
+
+          button {
+            width: 100%;
+            height: 100%;
+
+            font-size: 15px;
+            line-height: 26px;
+            font-family: "FuturaDemiC", sans-serif;
+            color: $white;
+            text-transform: uppercase;
+
+            background: $gold;
+            border: 0;
+            border-radius: 2px;
+            box-shadow: 0 15px 15px rgba(227, 184, 115, 0.15);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &-checkbox {
+      margin-top: 33px;
+
+      & .form-checkbox {
+        @include flex-cc(row);
+
+        &__input {
+          display: none;
+        }
+
+        &__label {
+          position: relative;
+
+          font-size: 16px;
+          line-height: 22px;
+          font-family: "FuturaBookC", sans-serif;
+          color: $bg-footer;
+
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: -27px;
+
+            width: 18px;
+            height: 18px;
+
+            background: $gold;
+            border-radius: 1px;
+
+@include flex-cc(row);
+          }
+        }
+
+        &__input:checked {
+          & + .form-checkbox__label {
+            &::before {
+              content: url("../../assets/images/desktop/video-control-checkbox.png");
+            }
+          }
+        }
+      }
+    }
   }
 }
