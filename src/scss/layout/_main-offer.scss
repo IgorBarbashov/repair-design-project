@@ -19,21 +19,25 @@
 
     background: $bg-main;
 
-    @include flex-cc(row);
-  }
+@include flex-cc(row);
 
-  &__aside-action {
-    transform: rotate(90deg);
-    cursor: pointer;
+    &-action {
+      transform: rotate(90deg);
+      cursor: pointer;
 
-    @include flex-cc(row);
-  }
+@include flex-cc(row);
+    }
 
-  &__aside-line {
-    width: 51px;
-    margin-left: 8px;
+    &-text a {
+      color: $gold;
+    }
 
-    border: 1px solid $gold;
+    &-line {
+      width: 51px;
+      margin-left: 8px;
+
+      border: 1px solid $gold;
+    }
   }
 
   &__background {
@@ -49,7 +53,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include flex-sc(row);
+@include flex-sc(row);
   }
 
   &__description {
@@ -64,7 +68,6 @@
     width: 85%;
 
     h2 {
-      font-weight: normal;
       font-size: 40px;
       line-height: 53px;
       font-family: "Yeseva One", cursive;
@@ -117,14 +120,14 @@
 
     background: $bg-main;
 
-    @include flex-cc(row);
+@include flex-cc(row);
 
     &-wrapper {
       width: 61%;
 
       cursor: pointer;
 
-      @include flex-bc(row);
+@include flex-bc(row);
     }
 
     &-text {

@@ -25,3 +25,17 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+@mixin flex-be($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin flex-se($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: flex-end;
+}

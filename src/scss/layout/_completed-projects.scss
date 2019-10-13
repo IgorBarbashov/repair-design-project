@@ -1,13 +1,213 @@
 .completed-projects {
   width: 100%;
-  // ????? - maybe in percent or max-height
   height: 1074px;
-  // !! delete
+  padding: 0 0 414px 7%;
 
-  background: $bg-d;
-  // border: 1px solid black;
+  background: $bg-main;
 
-  @media (max-width: 568px) {
-    background: $bg-dm;
+@include flex-be(row);
+
+  &__description {
+    width: 33%;
+    height: 482px;
+
+@include flex-bs(column);
+
+    & .description {
+      &__text {
+        height: 390px;
+
+@include flex-bs(column);
+      }
+
+      &__title {
+        width: 100%;
+
+@include flex-se(row);
+
+        &-name {
+          width: 40%;
+
+          font-style: normal;
+          font-size: 27px;
+          line-height: 37px;
+          font-family: "Yeseva One", cursive;
+          color: $gold;
+          text-transform: uppercase;
+        }
+
+        &-line {
+          width: 22%;
+          margin-bottom: 14px;
+
+          border: 1px solid $gold;
+        }
+      }
+
+      &__about {
+        font-size: 18px;
+        line-height: 29px;
+        font-family: "FuturaBookC", sans-serif;
+        color: $white;
+      }
+
+      &__params {
+        display: grid;
+        width: 100%;
+        height: 162px;
+        margin-top: 30px;
+
+        grid-row-gap: 34px;
+        grid-template: 1fr 1fr / 1fr 1fr;
+
+        &-city,
+        &-area,
+        &-time,
+        &-cost {
+          &-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: "Yeseva One", cursive;
+            color: $gold;
+            text-transform: uppercase;
+          }
+
+          &-text {
+            font-size: 15px;
+            line-height: 20px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $white;
+          }
+        }
+      }
+
+      &__slider-actions {
+        width: 47%;
+
+@include flex-bc(row);
+
+        & .slider-actions {
+          &__right-arrow,
+          &__left-arrow {
+            width: 20%;
+
+            cursor: pointer;
+          }
+
+          &__dots {
+            width: 31%;
+
+@include flex-bc(row);
+          }
+
+          &__dot {
+            position: relative;
+            top: -2px;
+
+            width: 10px;
+            height: 10px;
+
+            background: $grey;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &_active {
+              position: relative;
+              top: -2px;
+
+              width: 10px;
+              height: 10px;
+
+              background: $white;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__illustration {
+    &.illustration {
+      position: relative;
+
+      width: 64%;
+      height: 552px;
+
+      color: $grey;
+
+@include flex-bs(column);
+    }
+
+    & .illustration {
+      &__tabs {
+        width: 73%;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        font-family: "Yeseva One", cursive;
+        text-transform: uppercase;
+
+@include flex-bs(row);
+
+        & .illustration__tab {
+          cursor: pointer;
+
+          &_active {
+            padding-bottom: 7px;
+
+            color: $gold;
+
+            border-bottom: 1px solid $gold;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__images {
+        width: 100%;
+        height: 482px;
+        overflow: hidden;
+
+@include flex-sc(row);
+
+        &-current {
+          width: 80%;
+          height: 100%;
+          margin-right: 2.5%;
+        }
+
+        &-next {
+          width: 18%;
+          height: 100%;
+          overflow: hidden;
+
+          & img {
+            position: relative;
+            left: -130px;
+          }
+        }
+      }
+
+      &__action {
+        position: absolute;
+        top: 50%;
+        right: 71px;
+
+        width: 55px;
+        height: 55px;
+
+        background: $gold;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(227, 184, 115, 0.5);
+        cursor: pointer;
+
+@include flex-cc(row);
+      }
+    }
   }
 }
