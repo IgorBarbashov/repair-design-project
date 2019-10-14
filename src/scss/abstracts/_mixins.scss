@@ -53,3 +53,10 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+@mixin flex-cs($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: flex-start;
+}
