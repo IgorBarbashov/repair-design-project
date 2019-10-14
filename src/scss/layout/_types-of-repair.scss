@@ -4,7 +4,7 @@
 
   background: $white;
 
-@include flex-sc(column);
+  @include flex-sc(column);
 
   &__title {
     font-size: 20px;
@@ -18,7 +18,7 @@
     width: 8%;
     margin-top: 13px;
 
-@include flex-bc(row);
+    @include flex-bc(row);
 
     &-line {
       width: 28%;
@@ -32,7 +32,7 @@
     height: 608px;
     margin-top: 31px;
 
-@include flex-bs(row);
+    @include flex-bs(row);
   }
 
   &__type {
@@ -42,7 +42,7 @@
     &.repair-type {
       position: relative;
 
-@include flex-bc(column);
+      @include flex-bc(column);
     }
 
     & .repair-type {
@@ -61,8 +61,9 @@
         text-transform: uppercase;
 
         background: $gold;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
-@include flex-cc(row);
+        @include flex-cc(row);
       }
 
       &__description {
@@ -75,6 +76,7 @@
         padding-left: 9%;
 
         background: $white;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 
         & .description {
           &__title {

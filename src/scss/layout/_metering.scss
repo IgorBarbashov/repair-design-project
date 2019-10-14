@@ -1,8 +1,9 @@
 .metering {
   width: 100%;
   height: 670px;
+  margin-top: 180px;
 
-// background: $white;
+  background: $white;
 
   @include flex-bs(row);
 
@@ -19,7 +20,7 @@
     height: 92%;
     margin-right: 7%;
 
-@include flex-bs(column);
+    @include flex-bs(column);
 
     &-form {
       width: 100%;
@@ -33,7 +34,7 @@
           width: 100%;
           height: 100%;
 
-@include flex-bc(column);
+          @include flex-bc(column);
         }
       }
 
@@ -52,14 +53,16 @@
 
         &__inputs {
           width: 80%;
-          height: 55%;
+
+          @include flex-bs(column);
 
           & .request-form__input {
-            padding-bottom: 10px;
+            width: 100%;
+            padding-bottom: 5px;
 
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
-@include flex-ss(column);
+            @include flex-ss(column);
 
             &:not(:first-child) label {
               margin-top: 48px;
@@ -94,23 +97,23 @@
           }
         }
 
-        ///////////////////////
         &__checkbox {
-          background: blue;
+          margin-top: 15px;
+          margin-left: 27px;
 
-@include flex-cc(row);
+          @include flex-cc(row);
 
-          &__input {
+          & input {
             display: none;
           }
 
-          &__label {
+          &-label {
             position: relative;
 
             font-size: 16px;
             line-height: 22px;
             font-family: "FuturaBookC", sans-serif;
-            color: $bg-footer;
+            color: $white;
 
             cursor: pointer;
 
@@ -126,19 +129,18 @@
               background: $gold;
               border-radius: 1px;
 
-@include flex-cc(row);
+              @include flex-cc(row);
             }
           }
 
-          &__input:checked {
-            & + .form-checkbox__label {
+          & input:checked {
+            & + .request-form__checkbox-label {
               &::before {
                 content: url("../../assets/images/desktop/video-control-checkbox.png");
               }
             }
           }
         }
-        //////////////////////////
 
         &__button {
           align-self: flex-end;
@@ -168,7 +170,7 @@
 
     &-tizer {
       width: 64%;
-      margin-left: 6%;
+      margin-left: 2%;
 
       &.request-tizer {
         @include flex-sc(row);
@@ -183,7 +185,7 @@
           border-radius: 50%;
           box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
 
-@include flex-cc(row);
+          @include flex-cc(row);
         }
 
         &__text {
