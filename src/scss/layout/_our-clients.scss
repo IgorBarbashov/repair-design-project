@@ -1,15 +1,128 @@
 .our-clients {
   width: 100%;
+  height: 642px;
+  margin-top: 6%;
 
-// ????? - maybe in percent or max-height
-  height: 1525px;
+@include flex-bc(column);
 
-// !! delete
+  &__header {
+    width: 100%;
 
-  background: $bg-d;
-  border: 1px solid black;
+@include flex-sc(column);
+  }
 
-  @media (max-width: 568px) {
-    display: none;
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $bg-footer;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 8%;
+    margin-top: 1%;
+
+@include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__tizer {
+    width: 25%;
+    margin-top: 1%;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $txt-grey-dark;
+  }
+
+  &__comments {
+    width: 86%;
+    height: 67%;
+
+@include flex-bs(row);
+
+    & .comment {
+      width: 30%;
+      height: 100%;
+
+@include flex-bs(column);
+
+      &__text {
+        flex-grow: 1;
+        width: 100%;
+
+@include flex-ss(column);
+
+        &-author {
+          width: 100%;
+          height: 20%;
+
+@include flex-sc(row);
+
+          &-name {
+            margin-left: 6%;
+
+            font-size: 18px;
+            line-height: 23px;
+            font-family: "Yeseva One", cursive;
+            color: $bg-footer;
+          }
+        }
+
+        &-paragraph {
+          flex-grow: 1;
+          width: 100%;
+          margin-top: 6%;
+
+          font-size: 15px;
+          line-height: 180%;
+          font-family: "FuturaBookC", sans-serif;
+          color: $txt-grey-middle;
+
+          & p:last-child {
+            margin-top: 3%;
+          }
+        }
+      }
+
+      &__params {
+        width: 79%;
+        height: 13%;
+
+        background: tan;
+
+@include flex-sc(row);
+
+        &-left {
+          width: 45%;
+          height: 100%;
+
+          border-right: 1px solid $white;
+        }
+
+        &-right {
+          flex-grow: 1;
+        }
+
+        &-left,
+        &-right {
+          font-size: 17px;
+          line-height: 24px;
+          font-family: "Yeseva One", cursive;
+          color: $white;
+          text-transform: uppercase;
+
+@include flex-ac(row);
+        }
+      }
+    }
   }
 }
