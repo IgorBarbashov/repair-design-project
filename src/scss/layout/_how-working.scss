@@ -1,15 +1,193 @@
 .how-working {
   width: 100%;
+  height: 686px;
 
-// ????? - maybe in percent or max-height
-  height: 1170px;
+  background: $bg-main;
 
-// !! delete
+  @include flex-bs(row);
 
-  background: $bg-d;
-  border: 1px solid black;
+  &__text-part {
+    width: 24%;
+    height: 86%;
+    margin-left: 7%;
 
-  @media (max-width: 568px) {
-    display: none;
+    &.text-part {
+      @include flex-bs(column);
+    }
+
+    & .text-part {
+      background: cyan;
+
+      &__header {
+        width: 90%;
+        height: 17%;
+
+        @include flex-bs(column);
+
+        &-title {
+          font-size: 15px;
+          line-height: 21px;
+          font-family: "FuturaDemiC", sans-serif;
+          color: $white;
+          text-transform: uppercase;
+        }
+
+        &-six-steps {
+          width: 100%;
+
+          @include flex-be(row);
+
+          & .six-steps {
+            &__text {
+              width: 65%;
+
+              font-size: 27px;
+              line-height: 37px;
+              font-family: "Yeseva One", cursive;
+              color: $gold;
+              text-transform: uppercase;
+            }
+
+            &__line {
+              width: 30%;
+              margin-bottom: 15px;
+
+              border: 1px solid $gold;
+            }
+          }
+        }
+      }
+
+      &__content {
+        width: 100%;
+        height: 47%;
+
+        @include flex-bs(column);
+
+        &-counter {
+          font-size: 18px;
+          line-height: 25px;
+          font-family: "Yeseva One", cursive;
+          color: $white;
+          text-transform: uppercase;
+        }
+
+        &-subtitle {
+          width: 78%;
+
+          font-size: 15px;
+          line-height: 23px;
+          font-family: "Yeseva One", cursive;
+          color: $gold;
+          text-transform: uppercase;
+        }
+
+        &-description {
+          font-size: 15px;
+          line-height: 25px;
+          font-family: "FuturaBookC", sans-serif;
+          color: $white;
+        }
+      }
+
+      &__pagination {
+        width: 85%;
+        height: 3%;
+
+        @include flex-bc(row);
+
+        &-to-left {
+          cursor: pointer;
+        }
+
+        &-bullets {
+          width: 50%;
+          height: 100%;
+          margin-bottom: 4px;
+
+          @include flex-bc(row);
+        }
+
+        &-bullet {
+          width: 10px;
+          height: 10px;
+
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          cursor: pointer;
+
+          &_active {
+            width: 10px;
+            height: 10px;
+
+            background: $white;
+            border-radius: 50%;
+          }
+        }
+
+        &-to-right {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__graph-part {
+    align-self: flex-end;
+    width: 53%;
+    height: 87%;
+    margin-right: 7%;
+
+    &.graph-part {
+      @include flex-bs(column);
+    }
+
+    & .graph-part {
+      &__list {
+        display: grid;
+        width: 100%;
+        height: 25%;
+
+        grid-row-gap: 36px;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+
+        &-item {
+          opacity: 0.3;
+        }
+
+        &-item_active {
+          opacity: 1;
+        }
+
+        & .list-item {
+          @include flex-ss(column);
+
+          &__title {
+            font-size: 15px;
+            line-height: 21px;
+            font-family: "Yeseva One", cursive;
+            color: $white;
+            text-transform: uppercase;
+
+            border-bottom: 1px solid $gold;
+          }
+
+          &__step {
+            margin-top: 10px;
+
+            font-size: 15px;
+            line-height: 18px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $white;
+          }
+        }
+      }
+
+      &__image {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
