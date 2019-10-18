@@ -959,12 +959,64 @@
             </div>
           </div>
         </section>
-
-        <!-- current -->
         <section class="contacts" id="contacts">
-          
-          <!-- <div class="contacts__wrapper"> -->
-          <div class="contacts__form"></div>
+          <div class="contacts__form">
+            <div class="contacts__form-title">have any questions?</div>
+            <div class="contacts__form-fields form-fields">
+              <form action="#" method="post">
+              <div class="form-fields__contacts">
+                <div class="form-fields__contacts-name">
+                  <label for="form-fields__contacts-name">Name</label>
+                  <input
+                    id="form-fields__contacts-name"
+                    name="form-fields__contacts-name"
+                    type="text"
+                    required
+                    placeholder="What is your name:"
+                  />
+                </div>
+                <div class="form-fields__contacts-phone">
+                  <label for="form-fields__contacts-phone">Phone</label>
+                  <input
+                    id="form-fields__contacts-phone"
+                    name="form-fields__contacts-phone"
+                    type="tel"
+                    required
+                    placeholder="Your phone number:"
+                  />
+                </div>
+              </div>
+              <div class="form-fields__question">
+                <label for="form-fields__question">Question</label>
+                <input
+                  id="form-fields__question"
+                  name="form-fields__question"
+                  type="text"
+                  required
+                  placeholder="I want to know:"
+                />
+              </div>
+              <div class="form-fields__agreement">
+                <label class="form-fields__agreement-label" for="form-fields__agreement">
+                  <input
+                    class="form-fields__agreement-checkbox"
+                    type="checkbox"
+                    id="form-fields__agreement"
+                    name="form-fields__agreement"
+                    reqiured
+                    checked
+                  />
+                  <div class="form-fields__agreement-text">
+                      I agree to the processing of personal data
+                  </div>
+                </label>
+              </div>
+              <div class="form-fields__submit">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            </div>
+          </div>
           <div class="contacts__contacts">
             Rostov-on-Don, Nansen St., 239 Shopping Center<br />Decorum Tel +7
             (928) 768 32 29
@@ -984,14 +1036,13 @@
             </div>
           </div>
           <div class="contacts__map"></div>
-        <!-- </div> -->
-
-
         </section>
-        <!-- current -->
       </main>
 
+      <!-- current -->
       <footer class="footer">footer</footer>
+      <!-- current -->
+
     </section>
   </body>
 </html>
