@@ -13,7 +13,7 @@
 
   background: $bg-main;
 
-  @include flex-bc(row);
+@include flex-bc(row);
 
   &__name {
     font-size: inherit;
@@ -44,7 +44,7 @@
   &__phone {
     width: 27%;
 
-    @include flex-bc(row);
+@include flex-bc(row);
   }
 
   &__call-us {
@@ -63,5 +63,25 @@
     border: 0;
     border-radius: 2px;
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+  }
+
+  @media screen and (max-width: $mobile) {
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }

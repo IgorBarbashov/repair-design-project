@@ -5,7 +5,7 @@
 
   background: $white;
 
-  @include flex-bs(row);
+@include flex-bs(row);
 
   &__stages {
     position: relative;
@@ -57,7 +57,7 @@
           border: 10px solid $white;
           border-radius: 50%;
 
-          @include flex-cc(row);
+@include flex-cc(row);
         }
 
         &__text {
@@ -76,7 +76,7 @@
 
           width: 87%;
 
-          @include flex-sc(row);
+@include flex-sc(row);
         }
 
         &__stage-2 {
@@ -84,7 +84,7 @@
           top: 170px;
           left: 580px;
 
-          @include flex-sc(row);
+@include flex-sc(row);
         }
 
         &__stage-3 {
@@ -92,7 +92,7 @@
           top: 330px;
           left: 600px;
 
-          @include flex-sc(row);
+@include flex-sc(row);
         }
 
         &__stage-4 {
@@ -100,7 +100,7 @@
           top: 485px;
           left: 525px;
 
-          @include flex-sc(row);
+@include flex-sc(row);
         }
       }
     }
@@ -112,7 +112,7 @@
     height: 92%;
     margin-right: 7%;
 
-    @include flex-bs(column);
+@include flex-bs(column);
 
     &-form {
       width: 100%;
@@ -126,7 +126,7 @@
           width: 100%;
           height: 100%;
 
-          @include flex-bc(column);
+@include flex-bc(column);
         }
       }
 
@@ -146,7 +146,7 @@
         &__inputs {
           width: 80%;
 
-          @include flex-bs(column);
+@include flex-bs(column);
 
           & .request-form__input {
             width: 100%;
@@ -154,7 +154,7 @@
 
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
-            @include flex-ss(column);
+@include flex-ss(column);
 
             &:not(:first-child) label {
               margin-top: 48px;
@@ -193,7 +193,7 @@
           margin-top: 15px;
           margin-left: 27px;
 
-          @include flex-cc(row);
+@include flex-cc(row);
 
           & input {
             display: none;
@@ -221,7 +221,7 @@
               background: $gold;
               border-radius: 1px;
 
-              @include flex-cc(row);
+@include flex-cc(row);
             }
           }
 
@@ -277,7 +277,7 @@
           border-radius: 50%;
           box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
 
-          @include flex-cc(row);
+@include flex-cc(row);
         }
 
         &__text {
@@ -292,5 +292,9 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    //
   }
 }

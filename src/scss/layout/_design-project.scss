@@ -2,7 +2,7 @@
   width: 100%;
   margin-top: 112px;
 
-  @include flex-sc(column);
+@include flex-sc(column);
 
   &__title {
     font-size: 20px;
@@ -16,7 +16,7 @@
     width: 8%;
     margin-top: 13px;
 
-    @include flex-bc(row);
+@include flex-bc(row);
 
     &-line {
       width: 28%;
@@ -42,7 +42,7 @@
     width: 86%;
     margin-top: 40px;
 
-    @include flex-bs(row);
+@include flex-bs(row);
 
     &-item {
       width: 31.5%;
@@ -66,7 +66,7 @@
       &.project-item {
         position: relative;
 
-        @include flex-sc(column);
+@include flex-sc(column);
       }
 
       & .project-item {
@@ -125,7 +125,7 @@
           background: $gold;
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
 
-          @include flex-sc(row);
+@include flex-sc(row);
         }
       }
     }
@@ -140,5 +140,9 @@
     margin-bottom: -140px;
 
     background: $bg-main;
+  }
+
+  @media screen and (max-width: $mobile) {
+    //
   }
 }

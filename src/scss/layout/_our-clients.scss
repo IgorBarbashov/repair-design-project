@@ -3,12 +3,12 @@
   height: 642px;
   margin-top: 6%;
 
-  @include flex-bc(column);
+@include flex-bc(column);
 
   &__header {
     width: 100%;
 
-    @include flex-sc(column);
+@include flex-sc(column);
   }
 
   &__title {
@@ -23,7 +23,7 @@
     width: 8%;
     margin-top: 1%;
 
-    @include flex-bc(row);
+@include flex-bc(row);
 
     &-line {
       width: 28%;
@@ -47,25 +47,25 @@
     width: 86%;
     height: 67%;
 
-    @include flex-bs(row);
+@include flex-bs(row);
 
     & .comment {
       width: 30%;
       height: 100%;
 
-      @include flex-bs(column);
+@include flex-bs(column);
 
       &__text {
         flex-grow: 1;
         width: 100%;
 
-        @include flex-ss(column);
+@include flex-ss(column);
 
         &-author {
           width: 100%;
           height: 20%;
 
-          @include flex-sc(row);
+@include flex-sc(row);
 
           &-name {
             margin-left: 6%;
@@ -100,7 +100,7 @@
         background: $gold;
         box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
 
-        @include flex-sc(row);
+@include flex-sc(row);
 
         &-left {
           width: 45%;
@@ -121,9 +121,13 @@
           color: $white;
           text-transform: uppercase;
 
-          @include flex-ac(row);
+@include flex-ac(row);
         }
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    //
   }
 }

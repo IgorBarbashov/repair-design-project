@@ -172,4 +172,8 @@
 
 @include flex-sc(column);
   }
+
+  @media screen and (max-width: $mobile) {
+    //
+  }
 }

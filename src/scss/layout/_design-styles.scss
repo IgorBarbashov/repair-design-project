@@ -13,7 +13,7 @@
   background-position: center 112px;
   background-size: 100% 864px;
 
-  @include flex-bc(row);
+@include flex-bc(row);
 
   &__list {
     width: 21%;
@@ -35,7 +35,7 @@
       font-family: "Proxima Nova", sans-serif;
       color: $white;
 
-      @include flex-bs(column);
+@include flex-bs(column);
 
       & li:first-child {
         margin-top: 47px;
@@ -60,7 +60,7 @@
     height: 100%;
     margin-right: 7%;
 
-    @include flex-bc(row);
+@include flex-bc(row);
 
     &-column {
       width: 47%;
@@ -78,5 +78,9 @@
         margin-bottom: 40px;
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    //
   }
 }
