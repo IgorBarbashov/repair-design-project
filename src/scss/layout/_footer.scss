@@ -1,15 +1,67 @@
 .footer {
   width: 100%;
-
-// ????? - maybe in percent or max-height
   height: 133px;
+  padding: 0 7% 0 6%;
 
-// !! delete
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "FuturaDemiC", sans-serif;
+  color: $white;
+  text-transform: uppercase;
 
-  background: $bg-d;
-  border: 1px solid black;
+  background: $bg-main;
 
-  @media (max-width: 568px) {
-    display: none;
+  @include flex-bc(row);
+
+  &__name {
+    font-size: inherit;
+    line-height: inherit;
+    color: $gold;
+  }
+
+  &__nav {
+    width: 46%;
+
+    font-family: "FuturaBookC", sans-serif;
+  }
+
+  &__nav-items {
+    @include flex-bc(row);
+  }
+
+  &__nav-item {
+    display: inline-block;
+  }
+
+  &__nav-link {
+    &_active {
+      color: $gold;
+    }
+  }
+
+  &__phone {
+    width: 27%;
+
+    @include flex-bc(row);
+  }
+
+  &__call-us {
+    color: $gold;
+    text-decoration: underline;
+  }
+
+  &__req-call {
+    width: 161px;
+    height: 37px;
+
+    color: $white;
+    text-transform: uppercase;
+
+    background: $gold;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
   }
 }
