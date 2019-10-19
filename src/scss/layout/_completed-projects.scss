@@ -215,7 +215,6 @@
   }
 
   @media screen and (max-width: $mobile) {
-    height: 692px;
     padding: 0;
 
 @include flex-sc(column);
@@ -280,6 +279,7 @@
 
         font-size: 14px;
         line-height: 158.48%;
+        letter-spacing: 0.4px;
       }
 
       &__params {
