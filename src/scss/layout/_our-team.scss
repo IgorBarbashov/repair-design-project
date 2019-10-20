@@ -125,7 +125,7 @@
       &__signature-prof {
         font-size: 18px;
         line-height: 26px;
-        font-family: FuturaBookC;
+        font-family: "FuturaBookC", sans-serif;
         color: $txt-grey-middle;
       }
 
@@ -174,6 +174,77 @@
   }
 
   @media screen and (max-width: $mobile) {
-    //
+    height: 100%;
+
+    &__light-wrapper {
+      display: none;
+    }
+
+    &__title {
+      margin-top: 96px;
+
+      font-size: 22px;
+      line-height: 138.6%;
+    }
+
+    &__icon {
+      width: 114px;
+      margin-top: 13px;
+    }
+
+    &__tizer {
+      width: calc(100% - 36px);
+      margin-top: 24px;
+
+      font-size: 15px;
+      line-height: 135.84%;
+    }
+
+    &__photos-wrapper {
+      height: 100%;
+
+      background: $bg-main;
+    }
+
+    &__photos {
+      width: 100%;
+      padding: 0 18px;
+
+@include flex-se(column);
+    }
+
+    &__photo {
+      flex-shrink: 0;
+      width: 304px;
+      height: 358px;
+      margin-top: 166px;
+
+      background-position: top right;
+      background-size: 304px 414px;
+
+      &:first-child {
+        margin-top: 76px;
+      }
+
+      &-badge {
+        bottom: -56px;
+        left: 35px;
+
+        width: 233px;
+        height: 137px;
+
+        & .photo-badge {
+          &__signature-name {
+            font-size: 18px;
+            line-height: 25px;
+          }
+
+          &__signature-prof {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
   }
 }
