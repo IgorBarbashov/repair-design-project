@@ -104,12 +104,29 @@
     border: 1px solid $white;
     border-radius: 2px;
 
+    transition: 0.3s;
+
+    &:hover {
+      color: $gold;
+
+      background: $bg-main;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+    }
+
     &_highlight {
       background: $gold;
       border: 0;
       box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+
+      &:hover {
+        color: $gold;
+
+        background: $bg-main;
+        border: 1px solid $white;
+      }
     }
   }
+
   &__scroll-down {
     position: absolute;
     bottom: -49px;
@@ -121,6 +138,10 @@
     background: $bg-main;
 
 @include flex-cc(row);
+
+    & img {
+      transition: transform 0.5s;
+    }
 
     &-wrapper {
       width: 61%;
@@ -135,6 +156,14 @@
       line-height: 19px;
       font-family: Yeseva One;
       text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $gold;
+
+      & img {
+        transform: rotate(360deg);
+      }
     }
   }
 

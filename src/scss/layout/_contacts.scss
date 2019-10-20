@@ -187,7 +187,13 @@
       border-radius: 50%;
       cursor: pointer;
 
+      transition: transform 0.3s;
+
 @include flex-cc(row);
+
+      &:hover {
+        transform: scale(1.5);
+      }
     }
   }
 

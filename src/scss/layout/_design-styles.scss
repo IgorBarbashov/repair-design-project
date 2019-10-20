@@ -52,6 +52,12 @@
 
         border-bottom: 1px solid $gold;
       }
+
+      &:hover a {
+        color: $gold;
+
+        border-bottom: 1px solid $gold;
+      }
     }
   }
 

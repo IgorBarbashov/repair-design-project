@@ -97,6 +97,12 @@
             width: 20%;
 
             cursor: pointer;
+
+            transition: transform 0.3s;
+
+            &:hover {
+              transform: scaleX(1.5);
+            }
           }
 
           &__dots {
@@ -116,6 +122,8 @@
             border-radius: 50%;
             cursor: pointer;
 
+            transition: transform 0.3s;
+
             &_active {
               position: relative;
               top: -2px;
@@ -125,6 +133,22 @@
 
               background: $white;
               border-radius: 50%;
+            }
+
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+
+          &__left-arrow {
+            &:hover {
+              transform-origin: right top;
+            }
+          }
+
+          &__right-arrow {
+            &:hover {
+              transform-origin: left top;
             }
           }
         }
@@ -160,6 +184,8 @@
         & .illustration__tab {
           cursor: pointer;
 
+          transition: 0.3s;
+
           &_active {
             padding-bottom: 7px;
 
@@ -167,6 +193,10 @@
 
             border-bottom: 1px solid $gold;
             cursor: pointer;
+          }
+
+          &:hover {
+            color: $white;
           }
         }
       }
@@ -210,6 +240,16 @@
         cursor: pointer;
 
 @include flex-cc(row);
+
+        & img {
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          & img {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
   }
@@ -251,6 +291,15 @@
           border-radius: 50%;
 
 @include flex-cc(row);
+
+          & img {
+            transition: transform 0.3s;
+          }
+          &:hover {
+            & img {
+              transform: rotate(360deg);
+            }
+          }
         }
       }
 
