@@ -140,6 +140,10 @@
           & input {
             border: 0;
           }
+
+          &_mobile {
+            display: none;
+          }
         }
 
         &__submit {
@@ -300,12 +304,21 @@
             border-bottom: 0;
             & input {
               width: 100%;
+              padding-bottom: 5px;
 
               color: $white;
 
               background: $bg-main;
               border: 0;
               border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+            }
+
+            &_desktop {
+              display: none;
+            }
+
+            &_mobile {
+              display: inline;
             }
           }
 
