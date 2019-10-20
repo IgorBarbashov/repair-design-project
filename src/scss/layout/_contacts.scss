@@ -167,6 +167,10 @@
     text-align: center;
     color: $gold;
     text-transform: uppercase;
+
+    & a {
+      text-decoration: none;
+    }
   }
 
   &__social {
@@ -181,6 +185,7 @@
 
       background: $gold;
       border-radius: 50%;
+      cursor: pointer;
 
 @include flex-cc(row);
     }
