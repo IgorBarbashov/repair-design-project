@@ -97,4 +97,26 @@
       text-decoration: none;
     }
   }
+
+  //////////////////////////////////////////////////
+
+  @media screen and (max-width: $tablet) {
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }

@@ -297,4 +297,10 @@
   @media screen and (max-width: $mobile) {
     display: none;
   }
+
+  ////////////////////////////////////////////////////
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
 }

@@ -347,4 +347,135 @@
       }
     }
   }
+
+  /////////////////////////////////////////////////////////////////
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 57px;
+
+    &__title {
+      font-size: 22px;
+      line-height: 138.6%;
+    }
+
+    &__icon {
+      width: 114px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    &_mixed-background,
+    &_white-background {
+      background: $bg-main;
+    }
+
+    &__video {
+      width: 340px;
+      height: 207px;
+    }
+
+    &__video-action {
+      display: none;
+    }
+
+    &__separator {
+      width: 55px;
+      height: 1px;
+      margin-top: 28px;
+    }
+
+    &__offer {
+      width: 100%;
+      margin-top: 21px;
+
+      font-size: 14px;
+      line-height: 169.8%;
+      color: $white;
+
+      & p {
+        margin-right: 18px;
+        margin-left: 18px;
+
+        letter-spacing: 0.4px;
+      }
+    }
+
+    &__form {
+      position: relative;
+
+      width: 100%;
+      margin-top: 0;
+
+      &-inputs {
+        height: 100%;
+
+@include flex-sc(column);
+
+        &.form-inputs {
+          font-size: 18px;
+          line-height: 138.72%;
+
+          & label {
+            font-size: 15px;
+            line-height: 20px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          & ::placeholder {
+            color: $white;
+          }
+        }
+
+        & .form-inputs {
+          &__name,
+          &__phone {
+            width: calc(100% - 36px);
+            margin: 39px 18px 0;
+
+            border-bottom: 0;
+            & input {
+              width: 100%;
+              padding-bottom: 5px;
+
+              color: $white;
+
+              background: $bg-main;
+              border: 0;
+              border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+            }
+
+            &_desktop {
+              display: none;
+            }
+
+            &_mobile {
+              display: inline;
+            }
+          }
+
+          &__submit {
+            width: 100%;
+            height: 51px;
+            margin-top: 107px;
+
+            background: linear-gradient(to bottom, $bg-main 50%, $white 50%);
+
+            & button {
+              width: 340px;
+            }
+          }
+        }
+      }
+
+      &-checkbox {
+        position: absolute;
+        top: 167px;
+        left: 47px;
+
+        & .form-checkbox__label {
+          color: $white;
+        }
+      }
+    }
+  }
 }

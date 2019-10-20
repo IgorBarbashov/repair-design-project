@@ -242,4 +242,82 @@
       display: none;
     }
   }
+
+  /////////////////////////////////////////////////////////////
+
+  @media screen and (max-width: $tablet) {
+    height: 476px;
+
+    &__aside {
+      display: none;
+    }
+
+    &__background {
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      padding-left: 0;
+
+      background-image: linear-gradient(
+      rgba(0, 0, 0, 0.702),
+      rgba(0, 0, 0, 0.702)
+      ),
+      url("../../assets/images/mobile/main-offer-background.png");
+      background-size: 100%;
+    }
+
+    &__description {
+      width: 90%;
+
+@include flex-sc(column);
+    }
+
+    &__actions {
+      width: 100%;
+      margin-top: 0;
+
+@include flex-sc(column);
+    }
+
+    &__button {
+      width: 100%;
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      margin-top: 85px;
+
+      h2 {
+        font-size: 23px;
+        line-height: 132.83%;
+      }
+    }
+
+    &__advantages {
+      width: 90%;
+
+      font-size: 18px;
+      line-height: 135.84%;
+    }
+
+    &__button {
+      margin-top: 32px;
+      margin-right: 0;
+
+      font-size: 13px;
+      line-height: 15px;
+
+      &:last-child {
+        margin-top: 26px;
+      }
+    }
+
+    &__scroll-down {
+      display: none;
+    }
+  }
 }
