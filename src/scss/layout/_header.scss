@@ -13,7 +13,7 @@
 
   background: $bg-main;
 
-@include flex-bc(row);
+  @include flex-bc(row);
 
   &__name {
     font-size: inherit;
@@ -48,7 +48,7 @@
   &__phone {
     width: 27%;
 
-@include flex-bc(row);
+    @include flex-bc(row);
   }
 
   &__call-us {
@@ -98,7 +98,33 @@
     }
   }
 
-  //////////////////////////////////////////////////
+  @media screen and (max-width: $laptop) {
+    &__phone {
+      justify-content: flex-end;
+      width: auto;
+    }
+
+    &__req-call {
+      display: none;
+    }
+
+    &__nav {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    font-size: 13px;
+
+    &__nav-item:first-child,
+    &__nav-item:nth-child(4) {
+      display: none;
+    }
+
+    &__nav {
+      width: 45%;
+    }
+  }
 
   @media screen and (max-width: $tablet) {
     height: 57px;
