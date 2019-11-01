@@ -4,13 +4,13 @@
 
   background: $bg-main;
 
-@include flex-be(row);
+  @include flex-be(row);
 
   &__description {
     width: 33%;
     height: 482px;
 
-@include flex-bs(column);
+    @include flex-bs(column);
 
     & .description {
       &__mobile-slider {
@@ -20,13 +20,13 @@
       &__text {
         height: 390px;
 
-@include flex-bs(column);
+        @include flex-bs(column);
       }
 
       &__title {
         width: 100%;
 
-@include flex-se(row);
+        @include flex-se(row);
 
         &-name {
           width: 40%;
@@ -89,7 +89,7 @@
       &__slider-actions {
         width: 47%;
 
-@include flex-bc(row);
+        @include flex-bc(row);
 
         & .slider-actions {
           &__right-arrow,
@@ -108,7 +108,7 @@
           &__dots {
             width: 31%;
 
-@include flex-bc(row);
+            @include flex-bc(row);
           }
 
           &__dot {
@@ -165,7 +165,7 @@
 
       color: $grey;
 
-@include flex-bs(column);
+      @include flex-bs(column);
     }
 
     & .illustration {
@@ -179,7 +179,7 @@
         font-family: "Yeseva One", cursive;
         text-transform: uppercase;
 
-@include flex-bs(row);
+        @include flex-bs(row);
 
         & .illustration__tab {
           cursor: pointer;
@@ -206,7 +206,7 @@
         height: 482px;
         overflow: hidden;
 
-@include flex-sc(row);
+        @include flex-sc(row);
 
         &-current {
           width: 80%;
@@ -239,7 +239,7 @@
         box-shadow: 0 0 15px rgba(227, 184, 115, 0.5);
         cursor: pointer;
 
-@include flex-cc(row);
+        @include flex-cc(row);
 
         & img {
           transition: transform 0.3s;
@@ -254,10 +254,128 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $desktop) {
+    &__illustration.illustration {
+      height: 38vw;
+    }
+
+    & .illustration__tabs {
+      width: 626px;
+    }
+
+    &__description.description {
+      height: 33vw;
+    }
+
+    & .illustration__images {
+      height: 33vw;
+    }
+
+    & .illustration__images-current > img {
+      width: 100%;
+    }
+
+    & .illustration__action {
+      right: 4.93vw;
+
+      width: 3.8vw;
+      height: 3.8vw;
+
+      &-icon {
+        width: 0.76vw;
+        height: 1.67vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 8.43vw;
+
+    &__description.description {
+      align-self: flex-start;
+    }
+
+    & .description__title-line {
+      display: none;
+    }
+
+    & .illustration__tabs {
+      width: 48.9vw;
+
+      font-size: 1.093vw;
+    }
+
+    & .illustration__action-icon {
+      width: 0.86vw;
+      height: 1.48vw;
+
+      & > img {
+        width: 0.86vw;
+        height: 1.48vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1146px) {
+    & .description__title-name {
+      font-size: 2.356vw;
+    }
+
+    & .description__about {
+      font-size: 1.57vw;
+      line-height: 2.53vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    & .illustration__tabs {
+      font-size: 11px;
+    }
+
+    & .description__slider-actions.slider-actions {
+      display: none;
+    }
+
+    & .description__params {
+      grid-row-gap: 3.54vw;
+
+      & > div > div:first-child {
+        font-size: 1.875vw;
+      }
+
+      & > div > div:last-child {
+        font-size: 1.563vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    & .description__title-name {
+      width: 100%;
+      margin-bottom: 10px;
+
+      line-height: 28px;
+    }
+
+    & .illustration__tabs {
+      width: 430px;
+
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    & .illustration__tabs {
+      width: 95%;
+
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
     padding: 0;
 
-@include flex-sc(column);
+    @include flex-sc(column);
 
     .description__title-line,
     .description__slider-actions,
@@ -280,7 +398,7 @@
 
         background-image: url("../../assets/images/mobile/complete-projects-mobile-slider.png");
 
-@include flex-bc(row);
+        @include flex-bc(row);
 
         & div {
           width: 36px;
@@ -290,7 +408,7 @@
           background: $gold;
           border-radius: 50%;
 
-@include flex-cc(row);
+          @include flex-cc(row);
 
           & img {
             transition: transform 0.3s;
@@ -353,12 +471,10 @@
     }
   }
 
-  /////////////////////////////////////////////////////
-
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $mobile) {
     padding: 0;
 
-@include flex-sc(column);
+    @include flex-sc(column);
 
     .description__title-line,
     .description__slider-actions,
@@ -381,7 +497,7 @@
 
         background-image: url("../../assets/images/mobile/complete-projects-mobile-slider.png");
 
-@include flex-bc(row);
+        @include flex-bc(row);
 
         & div {
           width: 36px;
@@ -391,7 +507,7 @@
           background: $gold;
           border-radius: 50%;
 
-@include flex-cc(row);
+          @include flex-cc(row);
 
           & img {
             transition: transform 0.3s;
