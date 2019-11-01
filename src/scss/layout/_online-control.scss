@@ -4,7 +4,7 @@
 
   background: $bg-main;
 
-@include flex-sc(column);
+  @include flex-sc(column);
 
   &__title {
     font-size: 20px;
@@ -19,7 +19,7 @@
     margin-top: 13px;
     margin-bottom: 31px;
 
-@include flex-bc(row);
+    @include flex-bc(row);
 
     &-line {
       width: 28%;
@@ -33,13 +33,13 @@
 
     background: linear-gradient(to bottom, $bg-main 50%, $white 50%);
 
-@include flex-sc(column);
+    @include flex-sc(column);
   }
 
   &_white-background {
     background: $white;
 
-@include flex-sc(column);
+    @include flex-sc(column);
   }
 
   &__video {
@@ -72,7 +72,7 @@
       box-shadow: 0 5px 30px rgba(227, 184, 115, 0.2);
       cursor: pointer;
 
-@include flex-cc(row);
+      @include flex-cc(row);
 
       & img {
         position: relative;
@@ -107,7 +107,7 @@
     &-inputs {
       height: 51px;
 
-@include flex-bs(row);
+      @include flex-bs(row);
 
       &.form-inputs {
         font-size: 18px;
@@ -135,7 +135,7 @@
 
           border-bottom: 1px solid $txt-grey-input-line;
 
-@include flex-bs(column);
+          @include flex-bs(column);
 
           & input {
             border: 0;
@@ -150,7 +150,7 @@
           width: 26%;
           height: 100%;
 
-@include flex-cc(row);
+          @include flex-cc(row);
 
           button {
             width: 100%;
@@ -204,7 +204,7 @@
             background: $gold;
             border-radius: 1px;
 
-@include flex-cc(row);
+            @include flex-cc(row);
           }
         }
 
@@ -219,7 +219,24 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $desktop) {
+    & .online-control__video {
+      width: 821px;
+    }
+
+    & .online-control__offer,
+    & .online-control__form {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    & .online-control__video {
+      width: 85vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
     padding-top: 57px;
 
     &__title {
@@ -278,7 +295,7 @@
       &-inputs {
         height: 100%;
 
-@include flex-sc(column);
+        @include flex-sc(column);
 
         &.form-inputs {
           font-size: 18px;
@@ -348,9 +365,7 @@
     }
   }
 
-  /////////////////////////////////////////////////////////////////
-
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $mobile) {
     padding-top: 57px;
 
     &__title {
@@ -409,7 +424,7 @@
       &-inputs {
         height: 100%;
 
-@include flex-sc(column);
+        @include flex-sc(column);
 
         &.form-inputs {
           font-size: 18px;
