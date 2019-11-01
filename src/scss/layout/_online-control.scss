@@ -219,7 +219,7 @@
     }
   }
 
-  @media screen and (max-width: $desktop) {
+  @media screen and (max-width: $laptop) {
     & .online-control__video {
       width: 821px;
     }
@@ -491,6 +491,11 @@
           color: $white;
         }
       }
+    }
+
+    & .online-control__offer,
+    & .online-control__form {
+      width: 100%;
     }
   }
 }

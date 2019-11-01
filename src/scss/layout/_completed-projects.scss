@@ -339,12 +339,17 @@
     & .description__params {
       grid-row-gap: 3.54vw;
 
-      & > div > div:first-child {
-        font-size: 1.875vw;
-      }
+      &-city,
+      &-area,
+      &-time,
+      &-cost {
+        &-title {
+          font-size: 1.875vw;
+        }
 
-      & > div > div:last-child {
-        font-size: 1.563vw;
+        &-text {
+          font-size: 1.563vw;
+        }
       }
     }
   }
@@ -563,6 +568,7 @@
           &-text {
             margin-top: 11px;
 
+            font-size: 15px;
             line-height: 135.84%;
           }
         }
