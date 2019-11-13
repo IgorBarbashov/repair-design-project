@@ -315,7 +315,7 @@
         & .form-inputs {
           &__name,
           &__phone {
-            width: calc(100% - 36px);
+            width: calc(80% - 36px);
             margin: 39px 18px 0;
 
             border-bottom: 0;
@@ -356,12 +356,16 @@
       &-checkbox {
         position: absolute;
         top: 167px;
-        left: 47px;
+        left: calc(10% + 47px);
 
         & .form-checkbox__label {
           color: $white;
         }
       }
+    }
+
+    & .online-control__form {
+      width: 100%;
     }
   }
 
