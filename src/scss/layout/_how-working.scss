@@ -211,13 +211,26 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
-    display: none;
+  //////////////////////////////////////////////////////
+
+  @media screen and (max-width: $desktop) {
+    .how-working__graph-part.graph-part {
+      height: 41.389vw;
+    }
   }
 
-  ////////////////////////////////////////////////////
+  @media screen and (max-width: 1150px) {
+    .how-working__graph-part.graph-part {
+      height: 50vw;
+    }
 
-  @media screen and (max-width: $tablet) {
+    .how-working__text-part .text-part__header-six-steps .six-steps__text {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
     display: none;
   }
 }
