@@ -10,7 +10,7 @@
   &__stages {
     position: relative;
 
-    width: 54%;
+    width: 778px;
     height: 95%;
     overflow: hidden;
 
@@ -28,7 +28,7 @@
       top: 0;
       left: -25%;
 
-      width: 82%;
+      width: 637px;
       height: 100%;
 
       border: 5px solid $gold;
@@ -38,6 +38,7 @@
         &__inner-wrapper {
           position: relative;
 
+          flex-shrink: 0;
           width: 100%;
           height: 100%;
         }
@@ -294,13 +295,41 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
-    display: none;
+  @media screen and (max-width: $desktop) {
+    margin-top: 12.5vw;
+
+    .metering__stages {
+      position: relative;
+      left: calc(100vw - 1440px);
+
+      flex-shrink: 0;
+    }
+
+    .metering__request {
+      position: relative;
+      right: calc(1440px - 100vw);
+
+      flex-shrink: 0;
+      width: 498px;
+      margin-right: calc(7% + 100vw - 1440px);
+    }
   }
 
-  ////////////////////////////////////////////////////
+  @media screen and (max-width: 1150px) {
+    margin-top: 4.3478vw;
 
-  @media screen and (max-width: $tablet-max) {
+    .metering__stages {
+      display: none;
+    }
+
+    .metering__request {
+      position: static;
+
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
     display: none;
   }
 }
