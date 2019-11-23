@@ -173,84 +173,63 @@
 @include flex-sc(column);
   }
 
-  @media screen and (max-width: $mobile) {
-    height: 100%;
-
-    &__light-wrapper {
-      display: none;
-    }
-
-    &__title {
-      margin-top: 96px;
-
-      font-size: 22px;
-      line-height: 138.6%;
-    }
-
-    &__icon {
-      width: 114px;
-      margin-top: 13px;
-    }
-
-    &__tizer {
-      width: calc(100% - 36px);
-      margin-top: 24px;
-
-      font-size: 15px;
-      line-height: 135.84%;
-    }
-
-    &__photos-wrapper {
-      height: 100%;
-
-      background: $bg-main;
-    }
-
-    &__photos {
-      width: 100%;
-      padding: 0 18px;
-
-@include flex-se(column);
-    }
-
-    &__photo {
-      flex-shrink: 0;
-      width: 304px;
-      height: 358px;
-      margin-top: 166px;
-
-      background-position: top right;
-      background-size: 304px 414px;
-
-      &:first-child {
-        margin-top: 76px;
-      }
-
-      &-badge {
-        bottom: -56px;
-        left: 35px;
-
-        width: 233px;
-        height: 137px;
-
-        & .photo-badge {
-          &__signature-name {
-            font-size: 18px;
-            line-height: 25px;
-          }
-
-          &__signature-prof {
-            font-size: 18px;
-            line-height: 26px;
-          }
-        }
-      }
+  //////////////////////////////////////////////////////////////
+  @media screen and (max-width: $desktop) {
+    .our-team__photos {
+      width: 1022px;
     }
   }
 
-  //////////////////////////////////////////////////////////////
+  @media screen and (max-width: 1150px) {
+    height: 1320px;
 
-  @media screen and (max-width: $tablet) {
+    .our-team__photos-wrapper {
+      height: 1700px;
+
+// background: linear-gradient(to bottom, #131313 50%, #ffffff 50%);
+
+      background: none;
+    }
+
+    .our-team__photos {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      height: 338px;
+    }
+
+    .our-team__photo {
+      width: 275px;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    .our-team__photo:not(last-child) {
+      margin-bottom: 120px;
+    }
+
+    .our-team__tizer {
+      width: 55%;
+    }
+
+    .our-team__description {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 810px) {
+    height: 1780px;
+
+    .our-team__photo {
+      margin-right: 80px;
+      margin-left: 80px;
+    }
+
+    .our-team__tizer {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
     height: 100%;
 
     &__light-wrapper {
