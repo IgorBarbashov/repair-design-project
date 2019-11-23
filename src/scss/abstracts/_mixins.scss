@@ -74,3 +74,10 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+@mixin flex-as($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: flex-start;
+}
