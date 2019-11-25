@@ -136,11 +136,55 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
-    display: none;
+  @media screen and (max-width: $desktop) {
+    .our-clients__comments {
+      @include flex-as(row);
+    }
+
+    &__comment.comment {
+      width: 372px;
+
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
   }
 
-  /////////////////////////////////////
+  @media screen and (max-width: 1360px) {
+    .our-clients__tizer {
+      width: 30%;
+    }
+
+    &__comment.comment:last-child {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    .our-clients__tizer {
+      width: 40%;
+    }
+
+    &__comment.comment {
+      width: 41.875vw;
+      height: 47.625vw;
+
+      &:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    .comment__text-paragraph {
+      width: 90%;
+
+      font-size: 1.5625vw;
+      line-height: 180%;
+    }
+
+    .our-clients__comments .comment__params {
+      height: 51px;
+    }
+  }
 
   @media screen and (max-width: $tablet) {
     display: none;
