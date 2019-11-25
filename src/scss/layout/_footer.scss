@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  height: 133px;
+  height: 83px;
   padding: 0 7% 0 6%;
 
   font-style: normal;
@@ -79,12 +79,70 @@
   }
 
   @media screen and (max-width: $mobile) {
-    display: none;
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
-  /////////////////////////////////////////////////////////////////////
+  @media screen and (max-width: $laptop) {
+    &__phone {
+      justify-content: flex-end;
+      width: auto;
+    }
+
+    &__req-call {
+      display: none;
+    }
+
+    &__nav {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    font-size: 13px;
+
+    &__nav-item:first-child,
+    &__nav-item:nth-child(4) {
+      display: none;
+    }
+
+    &__nav {
+      width: 45%;
+    }
+  }
 
   @media screen and (max-width: $tablet) {
-    display: none;
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }

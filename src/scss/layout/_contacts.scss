@@ -207,8 +207,16 @@
   }
 
   @media screen and (max-width: $desktop) {
+    &#contacts {
+      background-size: cover;
+    }
+
     .contacts__form {
       width: 868px;
+    }
+
+    .contacts__map {
+      min-width: 650px;
     }
   }
 
@@ -281,14 +289,14 @@
 
     &__map {
       order: 2;
-      width: 100%;
+      width: 340px;
       height: 255px;
       margin-top: 164px;
 
       background: url("../../assets/images/mobile/contacts-map-mobile.png");
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: 100% 100%;
+      background-size: auto 100%;
     }
 
     &__contacts {
