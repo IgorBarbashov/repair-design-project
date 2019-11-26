@@ -5,7 +5,7 @@
 
   background: $bg-main;
 
-@include flex-sc(column);
+  @include flex-sc(column);
 
   &__title {
     font-size: 20px;
@@ -20,7 +20,7 @@
     width: 8%;
     margin-top: 1%;
 
-@include flex-bc(row);
+    @include flex-bc(row);
 
     &-line {
       width: 28%;
@@ -47,14 +47,14 @@
 
     background: linear-gradient(to bottom, $bg-main 50%, $white 50%);
 
-@include flex-cs(row);
+    @include flex-cs(row);
   }
 
   &__photos {
     width: 71%;
     height: 100%;
 
-@include flex-bc(row);
+    @include flex-bc(row);
   }
 
   &__photo {
@@ -78,7 +78,7 @@
       background-size: 100%;
       box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5);
 
-@include flex-cc(row);
+      @include flex-cc(row);
     }
 
     &:first-child {
@@ -102,7 +102,7 @@
     width: 84%;
     height: 39%;
 
-@include flex-bc(column);
+    @include flex-bc(column);
 
     & .photo-badge {
       &__signature {
@@ -112,7 +112,7 @@
         background: $white;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 
-@include flex-cc(column);
+        @include flex-cc(column);
       }
 
       &__signature-name {
@@ -141,7 +141,7 @@
 
         background: $gold;
 
-@include flex-cc(row);
+        @include flex-cc(row);
       }
     }
   }
@@ -170,13 +170,24 @@
 
     background: $white;
 
-@include flex-sc(column);
+    @include flex-sc(column);
   }
 
-  //////////////////////////////////////////////////////////////
   @media screen and (max-width: $desktop) {
+    .our-team__light-wrapper {
+      padding-bottom: 40px;
+    }
+
     .our-team__photos {
       width: 1022px;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    height: 870px;
+
+    .our-team__light-wrapper {
+      padding-bottom: 15px;
     }
   }
 
@@ -185,8 +196,6 @@
 
     .our-team__photos-wrapper {
       height: 1700px;
-
-// background: linear-gradient(to bottom, #131313 50%, #ffffff 50%);
 
       background: none;
     }
@@ -229,8 +238,12 @@
     }
   }
 
+  @media screen and (max-width: $tablet) {
+    height: 1880px;
+  }
+
   @media screen and (max-width: $mobile) {
-    height: 100%;
+    height: 1880px;
 
     &__light-wrapper {
       display: none;
@@ -244,7 +257,7 @@
     }
 
     &__icon {
-      width: 114px;
+      width: 275px;
       margin-top: 13px;
     }
 
@@ -266,7 +279,7 @@
       width: 100%;
       padding: 0 18px;
 
-@include flex-se(column);
+      @include flex-se(column);
     }
 
     &__photo {
@@ -301,6 +314,27 @@
           }
         }
       }
+    }
+
+    .our-team__photos {
+      height: 1490px;
+    }
+
+    .our-team__photo {
+      width: 304px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .our-team__photo:not(last-child),
+    .our-team__photo {
+      margin-bottom: 0;
+    }
+
+    .our-team__tizer {
+      width: calc(100% - 36px);
+      margin-top: 24px;
+      margin-bottom: 0;
     }
   }
 }

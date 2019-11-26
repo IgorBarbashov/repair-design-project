@@ -13,7 +13,7 @@
   background-position: center 112px;
   background-size: 100% 864px;
 
-@include flex-bc(row);
+  @include flex-bc(row);
 
   &__list {
     width: 25%;
@@ -35,7 +35,7 @@
       font-family: "Proxima Nova", sans-serif;
       color: $white;
 
-@include flex-bs(column);
+      @include flex-bs(column);
 
       & li:first-child {
         margin-top: 47px;
@@ -73,7 +73,7 @@
     width: 100%;
     height: 100%;
 
-@include flex-bc(row);
+    @include flex-bc(row);
 
     &__actions {
       display: none;
@@ -136,8 +136,8 @@
 
   @media screen and (max-width: 1150px) {
     .design-styles__list-title {
-      font-size: 2.3478vw;
-      line-height: 3.2174vw;
+      font-size: 24px;
+      line-height: 26px;
     }
   }
 
@@ -150,10 +150,9 @@
   @media screen and (max-width: $tablet) {
     height: 100%;
     margin-top: 0;
+    padding: 20px 0 60px;
 
-    background-image: none;
-
-@include flex-sc(column);
+    @include flex-sc(column);
 
     &__list-items,
     &__images-column {
@@ -180,8 +179,6 @@
 
       width: 100%;
       margin: 24px 0 0;
-
-      background: linear-gradient(to bottom, $white 50%, $bg-main 50%);
     }
 
     &__images {
@@ -207,12 +204,28 @@
         background: $gold;
         border-radius: 50%;
 
-@include flex-cc(row);
+        @include flex-cc(row);
       }
 
       &-right {
         left: calc(50% + 170px - 64px);
       }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+
+    background-image: none;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .design-styles__list-title {
+      padding: 30px 0 20px;
+    }
+
+    &__images-wrapper {
+      background: linear-gradient(to bottom, $white 50%, $bg-main 50%);
     }
   }
 }
