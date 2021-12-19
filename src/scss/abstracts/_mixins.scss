@@ -1,0 +1,83 @@
+@mixin flex-cc($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-bc($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-sc($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-bs($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin flex-be($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin flex-se($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+@mixin flex-bs($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin flex-ss($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flex-cs($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-ac($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-ec-ac($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-as($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: flex-start;
+}

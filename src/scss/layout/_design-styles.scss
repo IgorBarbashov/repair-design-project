@@ -1,0 +1,231 @@
+.design-styles {
+  width: 100%;
+  height: 1018px;
+  margin-top: 130px;
+
+  background-image: linear-gradient(
+  120.96deg,
+  rgba(0, 0, 0, 0.75) 0%,
+  rgba(0, 0, 0, 0.9) 100%
+  ),
+  url("../../assets/images/desktop/design-styles-background.png");
+  background-repeat: no-repeat;
+  background-position: center 112px;
+  background-size: 100% 864px;
+
+  @include flex-bc(row);
+
+  &__list {
+    width: 25%;
+    margin-top: 112px;
+    margin-left: 7%;
+
+    &-title {
+      font-size: 27px;
+      line-height: 37px;
+      font-family: "Yeseva One", cursive;
+      color: $gold;
+      text-transform: uppercase;
+    }
+
+    &-items {
+      list-style: none;
+      font-size: 20px;
+      line-height: 34px;
+      font-family: "Proxima Nova", sans-serif;
+      color: $white;
+
+      @include flex-bs(column);
+
+      & li:first-child {
+        margin-top: 47px;
+      }
+    }
+
+    &-item {
+      margin-top: 15px;
+
+      &_active a {
+        padding-bottom: 7px;
+
+        color: $gold;
+
+        border-bottom: 1px solid $gold;
+      }
+
+      &:hover a {
+        color: $gold;
+
+        border-bottom: 1px solid $gold;
+      }
+    }
+  }
+
+  &__images-wrapper {
+    width: 52%;
+    height: 100%;
+    margin-right: 7%;
+
+    background: none;
+  }
+
+  &__images {
+    width: 100%;
+    height: 100%;
+
+    @include flex-bc(row);
+
+    &__actions {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    &-column {
+      width: 47%;
+
+      &:first-child {
+        align-self: flex-end;
+        margin-right: 30px;
+      }
+
+      &:last-child {
+        align-self: flex-start;
+      }
+
+      & img:first-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-left,
+    &-right {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    height: 70.7vw;
+    margin-top: 9.028vw;
+
+    background-position: center 7.778vw;
+    background-size: 100% 60vw;
+
+    .design-styles__images-column {
+      width: 24.167vw;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    .design-styles__list-items {
+      font-size: 1.5625vw;
+      line-height: 2.65625vw;
+    }
+
+    .design-styles__list-items li:first-child {
+      margin-top: 3.671875vw;
+    }
+
+    .design-styles__list-item {
+      margin-top: 1.171875vw;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .design-styles__list-title {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    .design-styles__list {
+      margin-top: 11.67vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 100%;
+    margin-top: 0;
+    padding: 20px 0 60px;
+
+    @include flex-sc(column);
+
+    &__list-items,
+    &__images-column {
+      display: none;
+    }
+
+    &__list {
+      width: 100%;
+      margin: 167px 18px 0;
+
+      text-align: center;
+
+      &-title {
+        width: 70%;
+        margin: 0 auto;
+
+        font-size: 22px;
+        line-height: 138.6%;
+      }
+    }
+
+    &__images-wrapper {
+      position: relative;
+
+      width: 100%;
+      margin: 24px 0 0;
+    }
+
+    &__images {
+      width: 340px;
+      height: 242px;
+      margin: 0 auto;
+
+      background-image: url("../../assets/images/mobile/design-styles-photo.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+
+      &-left,
+      &-right {
+        position: absolute;
+        top: calc(50% - 18px);
+        left: calc(50% - 170px + 32px);
+
+        display: block;
+        width: 36px;
+        height: 36px;
+
+        background: $gold;
+        border-radius: 50%;
+
+        @include flex-cc(row);
+      }
+
+      &-right {
+        left: calc(50% + 170px - 64px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+
+    background-image: none;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .design-styles__list-title {
+      padding: 30px 0 20px;
+    }
+
+    &__images-wrapper {
+      background: linear-gradient(to bottom, $white 50%, $bg-main 50%);
+    }
+  }
+}

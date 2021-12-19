@@ -1,0 +1,335 @@
+.metering {
+  width: 100%;
+  height: 670px;
+  margin-top: 180px;
+
+  background: $white;
+
+@include flex-bs(row);
+
+  &__stages {
+    position: relative;
+
+    width: 778px;
+    height: 95%;
+    overflow: hidden;
+
+    &-background {
+      height: 100%;
+
+      background-image: url("../../assets/images/desktop/metering-background.png");
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: auto 87%;
+    }
+
+    &-circle {
+      position: absolute;
+      top: 0;
+      left: -25%;
+
+      width: 637px;
+      height: 100%;
+
+      border: 5px solid $gold;
+      border-radius: 50%;
+
+      & .stages-circle {
+        &__inner-wrapper {
+          position: relative;
+
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        &__icon {
+          flex-shrink: 0;
+          width: 62px;
+          height: 62px;
+
+          font-size: 18px;
+          line-height: 25px;
+          font-family: "Yeseva One", cursive;
+          text-align: center;
+          color: $white;
+
+          background: $gold;
+          border: 10px solid $white;
+          border-radius: 50%;
+
+@include flex-cc(row);
+        }
+
+        &__text {
+          flex-shrink: 0;
+          margin-left: 15px;
+
+          font-size: 18px;
+          line-height: 21px;
+          font-family: "FuturaMediumC", sans-serif;
+        }
+
+        &__stage-1 {
+          position: absolute;
+          top: 55px;
+          left: 495px;
+
+          width: 87%;
+
+@include flex-sc(row);
+        }
+
+        &__stage-2 {
+          position: absolute;
+          top: 170px;
+          left: 580px;
+
+@include flex-sc(row);
+        }
+
+        &__stage-3 {
+          position: absolute;
+          top: 330px;
+          left: 600px;
+
+@include flex-sc(row);
+        }
+
+        &__stage-4 {
+          position: absolute;
+          top: 485px;
+          left: 525px;
+
+@include flex-sc(row);
+        }
+      }
+    }
+  }
+
+  &__request {
+    align-self: flex-end;
+    width: 35%;
+    height: 92%;
+    margin-right: 7%;
+
+@include flex-bs(column);
+
+    &-form {
+      width: 100%;
+      height: 83%;
+
+      background: $bg-main;
+      box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+
+      &.request-form {
+        form {
+          width: 100%;
+          height: 100%;
+
+@include flex-bc(column);
+        }
+      }
+
+      & .request-form {
+        &__title {
+          width: 58%;
+          height: 10%;
+          margin-top: 5.5%;
+
+          font-size: 20px;
+          line-height: 25px;
+          font-family: "FuturaDemiC", sans-serif;
+          text-align: center;
+          color: $white;
+        }
+
+        &__inputs {
+          width: 80%;
+
+@include flex-bs(column);
+
+          & .request-form__input {
+            width: 100%;
+            padding-bottom: 5px;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+@include flex-ss(column);
+
+            &:not(:first-child) label {
+              margin-top: 48px;
+            }
+
+            & label {
+              font-size: 15px;
+              line-height: 20px;
+              font-family: "FuturaBookC", sans-serif;
+              color: rgba(255, 255, 255, 0.5);
+            }
+
+            & input {
+              width: 100%;
+              margin-top: 7px;
+
+              font-size: 18px;
+              line-height: 25px;
+              font-family: "FuturaMediumC", sans-serif;
+              color: $white;
+
+              background: $bg-main;
+              border: 0;
+
+              &::placeholder {
+                font-size: 18px;
+                line-height: 25px;
+                font-family: "FuturaMediumC", sans-serif;
+                color: $white;
+              }
+            }
+          }
+        }
+
+        &__checkbox {
+          margin-top: 15px;
+          margin-left: 27px;
+
+@include flex-cc(row);
+
+          & input {
+            display: none;
+          }
+
+          &-label {
+            position: relative;
+
+            font-size: 16px;
+            line-height: 22px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $white;
+
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 2px;
+              left: -27px;
+
+              width: 18px;
+              height: 18px;
+
+              background: $gold;
+              border-radius: 1px;
+
+@include flex-cc(row);
+            }
+          }
+
+          & input:checked {
+            & + .request-form__checkbox-label {
+              &::before {
+                content: url("../../assets/images/desktop/video-control-checkbox.png");
+              }
+            }
+          }
+        }
+
+        &__button {
+          align-self: flex-end;
+          width: 42%;
+          height: 10%;
+          margin-right: 10%;
+          margin-bottom: 5.5%;
+
+          & button {
+            width: 100%;
+            height: 100%;
+
+            font-size: 13px;
+            line-height: 18px;
+            font-family: "FuturaDemiC", sans-serif;
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+
+            background: $gold;
+            border: 0;
+            box-shadow: 0 5px 15px rgba(227, 184, 115, 0.15);
+          }
+        }
+      }
+    }
+
+    &-tizer {
+      width: 64%;
+      margin-left: 2%;
+
+      &.request-tizer {
+        @include flex-sc(row);
+      }
+
+      & .request-tizer {
+        &__icon {
+          width: 72px;
+          height: 72px;
+
+          background: $gold;
+          border-radius: 50%;
+          box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
+
+@include flex-cc(row);
+        }
+
+        &__text {
+          width: 69%;
+          margin-left: 8%;
+
+          font-size: 20px;
+          line-height: 25px;
+          font-family: "FuturaDemiC", sans-serif;
+          color: $gold;
+          text-shadow: 0 3px 10px rgba(227, 184, 115, 0.15);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    margin-top: 12.5vw;
+
+    .metering__stages {
+      position: relative;
+      left: calc(100vw - 1440px);
+
+      flex-shrink: 0;
+    }
+
+    .metering__request {
+      position: relative;
+      right: calc(1440px - 100vw);
+
+      flex-shrink: 0;
+      width: 498px;
+      margin-right: calc(7% + 100vw - 1440px);
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    margin-top: 4.3478vw;
+
+    .metering__stages {
+      display: none;
+    }
+
+    .metering__request {
+      position: static;
+
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}

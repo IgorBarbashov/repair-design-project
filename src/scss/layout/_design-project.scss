@@ -1,0 +1,318 @@
+.design-project {
+  width: 100%;
+  margin-top: 112px;
+
+  @include flex-sc(column);
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $bg-footer;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 8%;
+    margin-top: 13px;
+
+    @include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__offer {
+    width: 53%;
+    margin-top: 24px;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $txt-grey-dark;
+  }
+
+  &__variants {
+    z-index: 1;
+
+    width: 86%;
+    margin-top: 40px;
+
+    @include flex-bs(row);
+
+    &-item {
+      width: 31.5%;
+      height: 422px;
+
+      background-repeat: no-repeat;
+      background-position: center top;
+
+      &:first-child {
+        background-image: url("../../assets/images/desktop/design-project-example-1.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../assets/images/desktop/design-project-example-2.png");
+      }
+
+      &:last-child {
+        background-image: url("../../assets/images/desktop/design-project-example-3.png");
+      }
+
+      &.project-item {
+        position: relative;
+
+        @include flex-sc(column);
+      }
+
+      & .project-item {
+        &__description {
+          position: absolute;
+          top: 295px;
+
+          width: 84%;
+
+          background: $white;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+          &-title {
+            margin: 25px 0 0 34px;
+
+            font-size: 18px;
+            line-height: 25px;
+            font-family: "Yeseva One", cursive;
+            color: $txt-grey-dark;
+          }
+
+          &-items {
+            margin: 13px 0 0 34px;
+            padding-bottom: 57px;
+
+            list-style-position: inside;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $txt-grey-middle;
+          }
+
+          &-wrapper {
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+          }
+
+          &-item {
+            &_desktop {
+              display: list-item;
+            }
+
+            &_mobile {
+              display: none;
+            }
+          }
+        }
+
+        &__cost {
+          position: absolute;
+          bottom: -27px;
+          left: 0;
+
+          width: 70%;
+          height: 54px;
+          padding-left: 34px;
+
+          font-size: 18px;
+          line-height: 25px;
+          font-family: "Yeseva One", cursive;
+          color: $white;
+          text-transform: uppercase;
+
+          background: $gold;
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+
+          @include flex-sc(row);
+        }
+      }
+    }
+  }
+
+  &__dark-background {
+    position: relative;
+    top: -140px;
+
+    width: 100%;
+    height: 432px;
+    margin-bottom: -140px;
+
+    background: $bg-main;
+  }
+
+  @media screen and (max-width: 1150px) {
+    & .project-item__cost {
+      font-size: 1.56522vw;
+      line-height: 2.174vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    & .project-item__cost {
+      font-size: 15px;
+      line-height: 21px;
+    }
+    .design-project__variants {
+      flex-wrap: wrap;
+
+      @include flex-as(row);
+    }
+
+    .design-project__variants-item.project-item {
+      width: 340px;
+      height: 650px;
+    }
+
+    .design-project__variants-item.project-item:first-child {
+      height: 580px;
+    }
+
+    .project-item__description-item_desktop {
+      display: none;
+    }
+
+    .design-project__dark-background {
+      top: -450px;
+
+      height: 450px;
+      margin-bottom: -450px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-top: 0;
+
+    background: $bg-main;
+
+    &__title {
+      padding-top: 52px;
+
+      font-size: 22px;
+      line-height: 138.6%;
+      color: $white;
+    }
+
+    &__icon {
+      width: 114px;
+      margin-top: 16px;
+    }
+
+    &__offer {
+      width: calc(100% - 36px);
+      margin: 23px 18px 0;
+
+      font-size: 15px;
+      line-height: 135.84%;
+      color: $white;
+      letter-spacing: 1px;
+    }
+
+    &__variants {
+      width: 100%;
+      margin-top: 39px;
+      padding: 0 18px;
+
+      @include flex-sc(column);
+    }
+
+    &__variants-item,
+    &__description {
+      width: 100%;
+    }
+
+    &__variants-item {
+      height: 365px;
+
+      &:first-child {
+        margin-top: 0;
+
+        background-image: url("../../assets/images/mobile/design-projects-background-1.png");
+      }
+
+      &:nth-child(2) {
+        margin-top: 115px;
+
+        background-image: url("../../assets/images/mobile/design-projects-background-2.png");
+      }
+
+      &:last-child {
+        margin-top: 178px;
+
+        background-image: url("../../assets/images/mobile/design-projects-background-3.png");
+      }
+
+      &.project-item {
+        @include flex-ss(column);
+      }
+    }
+
+    & .project-item {
+      &__description {
+        top: 223px;
+
+        width: 270px;
+
+        &-title {
+          margin-top: 18px;
+
+          font-size: 15px;
+          line-height: 138.6%;
+        }
+
+        &-items {
+          margin-top: 13px;
+          padding-bottom: 49px;
+
+          font-size: 13px;
+          line-height: 169.8%;
+        }
+
+        &-item {
+          &_desktop {
+            display: none;
+          }
+
+          &_mobile {
+            display: inline;
+          }
+        }
+      }
+
+      &__cost {
+        bottom: -20px;
+
+        width: 190px;
+        height: 40px;
+        padding-left: 0;
+
+        font-size: 15px;
+        line-height: 138.6%;
+
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+
+        @include flex-cc(row);
+      }
+    }
+
+    &__dark-background {
+      display: none;
+    }
+
+    .design-project__variants-item.project-item:first-child,
+    .design-project__variants-item.project-item {
+      height: 380px;
+    }
+  }
+}

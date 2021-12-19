@@ -1,0 +1,148 @@
+.header {
+  width: 100%;
+  height: 83px;
+  padding: 0 7% 0 6%;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "FuturaDemiC", sans-serif;
+  color: $white;
+  text-transform: uppercase;
+
+  background: $bg-main;
+
+  @include flex-bc(row);
+
+  &__name {
+    font-size: inherit;
+    line-height: inherit;
+    color: $gold;
+  }
+
+  &__nav {
+    width: 46%;
+
+    font-family: "FuturaBookC", sans-serif;
+  }
+
+  &__nav-items {
+    @include flex-bc(row);
+  }
+
+  &__nav-item {
+    display: inline-block;
+  }
+
+  &__nav-link {
+    &_active {
+      color: $gold;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__phone {
+    width: 27%;
+
+    @include flex-bc(row);
+  }
+
+  &__call-us {
+    color: $gold;
+    text-decoration: underline;
+  }
+
+  &__req-call {
+    width: 161px;
+    height: 37px;
+
+    color: $white;
+    text-transform: uppercase;
+
+    background: $gold;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+
+    transition: 0.3s;
+
+    &:hover {
+      color: $gold;
+
+      background: $bg-main;
+      border: 1px solid $white;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__phone {
+      justify-content: flex-end;
+      width: auto;
+    }
+
+    &__req-call {
+      display: none;
+    }
+
+    &__nav {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    font-size: 13px;
+
+    &__nav-item:first-child,
+    &__nav-item:nth-child(4) {
+      display: none;
+    }
+
+    &__nav {
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 57px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    &__nav,
+    &__req-call {
+      display: none;
+    }
+
+    &__phone {
+      width: auto;
+    }
+    &__call-us {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

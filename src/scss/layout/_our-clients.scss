@@ -1,0 +1,192 @@
+.our-clients {
+  width: 100%;
+  height: 642px;
+  margin-top: 6%;
+
+@include flex-bc(column);
+
+  &__header {
+    width: 100%;
+
+@include flex-sc(column);
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $bg-footer;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 8%;
+    margin-top: 1%;
+
+@include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__tizer {
+    width: 25%;
+    margin-top: 1%;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $txt-grey-dark;
+  }
+
+  &__comments {
+    width: 86%;
+    height: 67%;
+
+@include flex-bs(row);
+
+    & .comment {
+      position: relative;
+
+      width: 30%;
+      height: 100%;
+      padding: 20px;
+
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
+
+@include flex-bs(column);
+
+      &__text {
+        flex-grow: 1;
+        width: 100%;
+
+@include flex-ss(column);
+
+        &-author {
+          width: 100%;
+          height: 20%;
+
+@include flex-sc(row);
+
+          &-name {
+            margin-left: 6%;
+
+            font-size: 18px;
+            line-height: 23px;
+            font-family: "Yeseva One", cursive;
+            color: $bg-footer;
+          }
+        }
+
+        &-paragraph {
+          flex-grow: 1;
+          width: 100%;
+          margin-top: 6%;
+
+          font-size: 15px;
+          line-height: 180%;
+          font-family: "FuturaBookC", sans-serif;
+          color: $txt-grey-middle;
+
+          & p:last-child {
+            margin-top: 3%;
+          }
+        }
+      }
+
+      &__params {
+        position: absolute;
+        bottom: -6.5%;
+        left: 0;
+
+        width: 79%;
+        height: 13%;
+
+        background: $gold;
+        box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+
+@include flex-sc(row);
+
+        &-left {
+          width: 45%;
+          height: 100%;
+
+          border-right: 1px solid $white;
+        }
+
+        &-right {
+          flex-grow: 1;
+        }
+
+        &-left,
+        &-right {
+          font-size: 17px;
+          line-height: 24px;
+          font-family: "Yeseva One", cursive;
+          color: $white;
+          text-transform: uppercase;
+
+@include flex-ac(row);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    .our-clients__comments {
+      @include flex-as(row);
+    }
+
+    &__comment.comment {
+      width: 372px;
+
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1360px) {
+    .our-clients__tizer {
+      width: 30%;
+    }
+
+    &__comment.comment:last-child {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    .our-clients__tizer {
+      width: 40%;
+    }
+
+    &__comment.comment {
+      width: 41.875vw;
+      height: 47.625vw;
+
+      &:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    .comment__text-paragraph {
+      width: 90%;
+
+      font-size: 1.5625vw;
+      line-height: 180%;
+    }
+
+    .our-clients__comments .comment__params {
+      height: 51px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}

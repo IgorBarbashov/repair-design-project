@@ -1,0 +1,340 @@
+.our-team {
+  width: 100%;
+  height: 940px;
+  padding-top: 95px;
+
+  background: $bg-main;
+
+  @include flex-sc(column);
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 8%;
+    margin-top: 1%;
+
+    @include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__tizer {
+    width: 33%;
+    margin-top: 1%;
+
+    font-size: 20px;
+    line-height: 27px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $white;
+  }
+
+  &__photos-wrapper {
+    width: 100%;
+    height: 42%;
+    margin-top: 6%;
+
+    background: linear-gradient(to bottom, $bg-main 50%, $white 50%);
+
+    @include flex-cs(row);
+  }
+
+  &__photos {
+    width: 71%;
+    height: 100%;
+
+    @include flex-bc(row);
+  }
+
+  &__photo {
+    position: relative;
+
+    width: 27%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    &-icon {
+      position: absolute;
+      top: -35px;
+      left: -35px;
+
+      width: 70px;
+      height: 70px;
+
+      background: $gold;
+      background-size: 100%;
+      box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5);
+
+      @include flex-cc(row);
+    }
+
+    &:first-child {
+      background-image: url("../../assets/images/desktop/our-team-photo-1.png");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../assets/images/desktop/our-team-photo-2.png");
+    }
+
+    &:last-child {
+      background-image: url("../../assets/images/desktop/our-team-photo-3.png");
+    }
+  }
+
+  &__photo-badge {
+    position: absolute;
+    bottom: -17%;
+    left: 8%;
+
+    width: 84%;
+    height: 39%;
+
+    @include flex-bc(column);
+
+    & .photo-badge {
+      &__signature {
+        width: 100%;
+        height: 68%;
+
+        background: $white;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+        @include flex-cc(column);
+      }
+
+      &__signature-name {
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Yeseva One", cursive;
+        color: $bg-footer;
+      }
+
+      &__signature-prof {
+        font-size: 18px;
+        line-height: 26px;
+        font-family: "FuturaBookC", sans-serif;
+        color: $txt-grey-middle;
+      }
+
+      &__exp {
+        width: 100%;
+        height: 32%;
+
+        font-size: 13px;
+        line-height: 20px;
+        font-family: "Yeseva One", cursive;
+        color: $white;
+        text-transform: uppercase;
+
+        background: $gold;
+
+        @include flex-cc(row);
+      }
+    }
+  }
+
+  &__separator {
+    width: 4%;
+    margin-top: 6%;
+
+    border: 1px solid $gold;
+  }
+
+  &__description {
+    width: 39%;
+    margin-top: 2%;
+
+    font-size: 20px;
+    line-height: 34px;
+    font-family: "FuturaBookC", sans-serif;
+    text-align: center;
+    color: $txt-grey-dark;
+  }
+
+  &__light-wrapper {
+    width: 100%;
+    padding-bottom: 15px;
+
+    background: $white;
+
+    @include flex-sc(column);
+  }
+
+  @media screen and (max-width: $desktop) {
+    .our-team__light-wrapper {
+      padding-bottom: 40px;
+    }
+
+    .our-team__photos {
+      width: 1022px;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    height: 870px;
+
+    .our-team__light-wrapper {
+      padding-bottom: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    height: 1320px;
+
+    .our-team__photos-wrapper {
+      height: 1700px;
+
+      background: none;
+    }
+
+    .our-team__photos {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      height: 338px;
+    }
+
+    .our-team__photo {
+      width: 275px;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    .our-team__photo:not(last-child) {
+      margin-bottom: 120px;
+    }
+
+    .our-team__tizer {
+      width: 55%;
+    }
+
+    .our-team__description {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 810px) {
+    height: 1780px;
+
+    .our-team__photo {
+      margin-right: 80px;
+      margin-left: 80px;
+    }
+
+    .our-team__tizer {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 1880px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    height: 1880px;
+
+    &__light-wrapper {
+      display: none;
+    }
+
+    &__title {
+      margin-top: 96px;
+
+      font-size: 22px;
+      line-height: 138.6%;
+    }
+
+    &__icon {
+      width: 275px;
+      margin-top: 13px;
+    }
+
+    &__tizer {
+      width: calc(100% - 36px);
+      margin-top: 24px;
+
+      font-size: 15px;
+      line-height: 135.84%;
+    }
+
+    &__photos-wrapper {
+      height: 100%;
+
+      background: $bg-main;
+    }
+
+    &__photos {
+      width: 100%;
+      padding: 0 18px;
+
+      @include flex-se(column);
+    }
+
+    &__photo {
+      flex-shrink: 0;
+      width: 304px;
+      height: 358px;
+      margin-top: 166px;
+
+      background-position: top right;
+      background-size: 304px 414px;
+
+      &:first-child {
+        margin-top: 76px;
+      }
+
+      &-badge {
+        bottom: -56px;
+        left: 35px;
+
+        width: 233px;
+        height: 137px;
+
+        & .photo-badge {
+          &__signature-name {
+            font-size: 18px;
+            line-height: 25px;
+          }
+
+          &__signature-prof {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+
+    .our-team__photos {
+      height: 1490px;
+    }
+
+    .our-team__photo {
+      width: 304px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .our-team__photo:not(last-child),
+    .our-team__photo {
+      margin-bottom: 0;
+    }
+
+    .our-team__tizer {
+      width: calc(100% - 36px);
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.types-of-repair {
+  width: 100%;
+  padding-top: 148px;
+
+  background: $white;
+
+@include flex-sc(column);
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Yeseva One", cursive;
+    color: $bg-footer;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 8%;
+    margin-top: 13px;
+
+@include flex-bc(row);
+
+    &-line {
+      width: 28%;
+
+      border: 1px solid $gold;
+    }
+  }
+
+  &__types {
+    width: 86%;
+    height: 608px;
+    margin-top: 31px;
+
+@include flex-bs(row);
+  }
+
+  &__type {
+    width: 31.5%;
+    height: 100%;
+
+    &.repair-type {
+      position: relative;
+
+@include flex-bc(column);
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .repair-type {
+      &__cost {
+        z-index: 1;
+
+        align-self: start;
+        width: 58%;
+        height: 54px;
+        margin-left: 8%;
+
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Yeseva One", cursive;
+        color: $white;
+        text-transform: uppercase;
+
+        background: $gold;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+
+@include flex-cc(row);
+      }
+
+      &__description {
+        position: absolute;
+        bottom: 27px;
+
+        width: 84%;
+        height: 286px;
+        padding-top: 25px;
+        padding-left: 9%;
+
+        background: $white;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+        & .description {
+          &__title {
+            font-size: 18px;
+            line-height: 25px;
+            font-family: "Yeseva One", cursive;
+            color: $txt-grey-dark;
+          }
+
+          &__items {
+            margin-top: 13px;
+
+            list-style-position: inside;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $txt-grey-middle;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 11.5625vw;
+
+    .types-of-repair__types {
+      height: 47.5vw;
+    }
+
+    .repair-type__description {
+      height: 22.34375vw;
+    }
+
+    .types-of-repair__type .repair-type__description .description__items {
+      font-size: 1.171875vw;
+      line-height: 1.953125vw;
+    }
+
+    .types-of-repair__type .repair-type__cost {
+      height: 4.21875vw;
+
+      font-size: 1.3vw;
+      line-height: 1.95vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    .types-of-repair__types {
+      flex-wrap: wrap;
+      height: 100%;
+
+@include flex-as(row);
+    }
+
+    .types-of-repair__type {
+      width: 255px;
+      height: 456px;
+      margin: 0 5px 50px;
+    }
+
+    .repair-type__description {
+      width: 215px;
+      height: 215px;
+    }
+
+    .types-of-repair__type .repair-type__description .description__items {
+      font-size: 11px;
+      line-height: 18.75px;
+    }
+
+    .types-of-repair__type .repair-type__cost {
+      width: 165px;
+      height: 37px;
+
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-top: 58px;
+    padding-top: 0;
+
+    &__title {
+      font-size: 22px;
+      line-height: 138.6%;
+    }
+
+    &__icon {
+      width: 114px;
+      margin-top: 17px;
+    }
+
+    &__types {
+      width: 100%;
+      height: 100%;
+      margin-top: 40px;
+
+@include flex-sc(column);
+    }
+
+    &__type {
+      &.repair-type {
+        width: calc(100% - 36px);
+        margin: 60px 18px 0;
+
+@include flex-ss(column);
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        & img {
+          width: 100%;
+        }
+      }
+
+      & .repair-type {
+        &__description {
+          bottom: 0;
+
+          & .description__title {
+            font-size: 15px;
+            line-height: 138.6%;
+          }
+
+          & .description__item {
+            font-size: 13px;
+            line-height: 169.8%;
+          }
+        }
+
+        &__description {
+          width: 270px;
+          height: 241px;
+        }
+
+        &__cost {
+          position: absolute;
+          bottom: -20px;
+
+          width: 190px;
+          height: 40px;
+          margin-left: 0;
+
+          font-size: 15px;
+          line-height: 138.6%;
+        }
+      }
+    }
+  }
+}

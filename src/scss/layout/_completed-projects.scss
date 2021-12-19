@@ -1,0 +1,578 @@
+.completed-projects {
+  width: 100%;
+  padding: 108px 0 0 7%;
+
+  background: $bg-main;
+
+  @include flex-be(row);
+
+  &__description {
+    width: 33%;
+    height: 482px;
+
+    @include flex-bs(column);
+
+    & .description {
+      &__mobile-slider {
+        display: none;
+      }
+
+      &__text {
+        height: 390px;
+
+        @include flex-bs(column);
+      }
+
+      &__title {
+        width: 100%;
+
+        @include flex-se(row);
+
+        &-name {
+          width: 40%;
+
+          font-style: normal;
+          font-size: 27px;
+          line-height: 37px;
+          font-family: "Yeseva One", cursive;
+          color: $gold;
+          text-transform: uppercase;
+        }
+
+        &-line {
+          width: 22%;
+          margin-bottom: 14px;
+
+          border: 1px solid $gold;
+        }
+      }
+
+      &__about {
+        font-size: 18px;
+        line-height: 29px;
+        font-family: "FuturaBookC", sans-serif;
+        color: $white;
+      }
+
+      &__params {
+        display: grid;
+        width: 100%;
+        height: 162px;
+        margin-top: 30px;
+
+        grid-row-gap: 34px;
+        grid-template: 1fr 1fr / 1fr 1fr;
+
+        &-city,
+        &-area,
+        &-time,
+        &-cost {
+          &-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: "Yeseva One", cursive;
+            color: $gold;
+            text-transform: uppercase;
+          }
+
+          &-text {
+            font-size: 15px;
+            line-height: 20px;
+            font-family: "FuturaBookC", sans-serif;
+            color: $white;
+          }
+        }
+      }
+
+      &__slider-actions {
+        width: 47%;
+
+        @include flex-bc(row);
+
+        & .slider-actions {
+          &__right-arrow,
+          &__left-arrow {
+            width: 20%;
+
+            cursor: pointer;
+
+            transition: transform 0.3s;
+
+            &:hover {
+              transform: scaleX(1.5);
+            }
+          }
+
+          &__dots {
+            width: 31%;
+
+            @include flex-bc(row);
+          }
+
+          &__dot {
+            position: relative;
+            top: -2px;
+
+            width: 10px;
+            height: 10px;
+
+            background: $grey;
+            border-radius: 50%;
+            cursor: pointer;
+
+            transition: transform 0.3s;
+
+            &_active {
+              position: relative;
+              top: -2px;
+
+              width: 10px;
+              height: 10px;
+
+              background: $white;
+              border-radius: 50%;
+            }
+
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+
+          &__left-arrow {
+            &:hover {
+              transform-origin: right top;
+            }
+          }
+
+          &__right-arrow {
+            &:hover {
+              transform-origin: left top;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__illustration {
+    &.illustration {
+      position: relative;
+
+      width: 64%;
+      height: 552px;
+
+      color: $grey;
+
+      @include flex-bs(column);
+    }
+
+    & .illustration {
+      &__tabs {
+        width: 73%;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        font-family: "Yeseva One", cursive;
+        text-transform: uppercase;
+
+        @include flex-bs(row);
+
+        & .illustration__tab {
+          cursor: pointer;
+
+          transition: 0.3s;
+
+          &_active {
+            padding-bottom: 7px;
+
+            color: $gold;
+
+            border-bottom: 1px solid $gold;
+            cursor: pointer;
+          }
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+
+      &__images {
+        width: 100%;
+        height: 482px;
+        overflow: hidden;
+
+        @include flex-sc(row);
+
+        &-current {
+          width: 80%;
+          height: 100%;
+          margin-right: 2.5%;
+        }
+
+        &-next {
+          width: 18%;
+          height: 100%;
+          overflow: hidden;
+
+          & img {
+            position: relative;
+            left: -130px;
+          }
+        }
+      }
+
+      &__action {
+        position: absolute;
+        top: 50%;
+        right: 71px;
+
+        width: 55px;
+        height: 55px;
+
+        background: $gold;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(227, 184, 115, 0.5);
+        cursor: pointer;
+
+        @include flex-cc(row);
+
+        & img {
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          & img {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    &__illustration.illustration {
+      height: 38vw;
+    }
+
+    & .illustration__tabs {
+      width: 626px;
+    }
+
+    &__description.description {
+      height: 33vw;
+    }
+
+    & .illustration__images {
+      height: 33vw;
+    }
+
+    & .illustration__images-current > img {
+      width: 100%;
+    }
+
+    & .illustration__action {
+      right: 4.93vw;
+
+      width: 3.8vw;
+      height: 3.8vw;
+
+      &-icon {
+        width: 0.76vw;
+        height: 1.67vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 8.43vw;
+
+    &__description.description {
+      align-self: flex-start;
+    }
+
+    & .description__title-line {
+      display: none;
+    }
+
+    & .illustration__tabs {
+      width: 48.9vw;
+
+      font-size: 1.093vw;
+    }
+
+    & .illustration__action-icon {
+      width: 0.86vw;
+      height: 1.48vw;
+
+      & > img {
+        width: 0.86vw;
+        height: 1.48vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1146px) {
+    & .description__title-name {
+      font-size: 2.356vw;
+    }
+
+    & .description__about {
+      font-size: 1.57vw;
+      line-height: 2.53vw;
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    & .illustration__tabs {
+      font-size: 11px;
+    }
+
+    & .description__slider-actions.slider-actions {
+      display: none;
+    }
+
+    & .description__params {
+      grid-row-gap: 3.54vw;
+
+      &-city,
+      &-area,
+      &-time,
+      &-cost {
+        &-title {
+          font-size: 1.875vw;
+        }
+
+        &-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    & .description__title-name {
+      width: 100%;
+      margin-bottom: 10px;
+
+      line-height: 28px;
+    }
+
+    & .illustration__tabs {
+      width: 430px;
+
+      font-size: 11px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    & .illustration__tabs {
+      width: 95%;
+
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 0;
+
+    @include flex-sc(column);
+
+    .description__title-line,
+    .description__slider-actions,
+    & .illustration {
+      display: none;
+    }
+
+    & .description {
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      text-align: center;
+
+      &__mobile-slider {
+        display: block;
+        width: 100%;
+        height: 242px;
+        margin-top: 36px;
+
+        background-image: url("../../assets/images/mobile/complete-projects-mobile-slider.png");
+
+        @include flex-bc(row);
+
+        & div {
+          width: 36px;
+          height: 36px;
+          margin: 0 14px;
+
+          background: $gold;
+          border-radius: 50%;
+
+          @include flex-cc(row);
+
+          & img {
+            transition: transform 0.3s;
+          }
+          &:hover {
+            & img {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+
+      &__text {
+        justify-content: flex-start;
+        width: 85%;
+        height: 100%;
+        margin: 36px 18px 0;
+      }
+
+      &__title {
+        justify-content: center;
+
+        h2 {
+          font-size: 22px;
+          line-height: 138.6%;
+        }
+
+        &-name {
+          width: 60%;
+        }
+      }
+
+      &__about {
+        margin-top: 22px;
+
+        font-size: 14px;
+        line-height: 158.48%;
+        letter-spacing: 0.4px;
+      }
+
+      &__params {
+        text-align: left;
+
+        &-city,
+        &-area,
+        &-time,
+        &-cost {
+          &-title {
+            font-size: 14px;
+            line-height: 138.6%;
+          }
+
+          &-text {
+            margin-top: 11px;
+
+            line-height: 135.84%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 0;
+
+    @include flex-sc(column);
+
+    .description__title-line,
+    .description__slider-actions,
+    & .illustration {
+      display: none;
+    }
+
+    & .description {
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      text-align: center;
+
+      &__mobile-slider {
+        display: block;
+        width: 100%;
+        height: 242px;
+        margin-top: 36px;
+
+        background-image: url("../../assets/images/mobile/complete-projects-mobile-slider.png");
+
+        @include flex-bc(row);
+
+        & div {
+          width: 36px;
+          height: 36px;
+          margin: 0 14px;
+
+          background: $gold;
+          border-radius: 50%;
+
+          @include flex-cc(row);
+
+          & img {
+            transition: transform 0.3s;
+          }
+          &:hover {
+            & img {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+
+      &__text {
+        justify-content: flex-start;
+        width: 85%;
+        height: 100%;
+        margin: 36px 18px 0;
+      }
+
+      &__title {
+        justify-content: center;
+
+        h2 {
+          font-size: 22px;
+          line-height: 138.6%;
+        }
+
+        &-name {
+          width: 60%;
+        }
+      }
+
+      &__about {
+        margin-top: 22px;
+
+        font-size: 14px;
+        line-height: 158.48%;
+        letter-spacing: 0.4px;
+      }
+
+      &__params {
+        text-align: left;
+
+        &-city,
+        &-area,
+        &-time,
+        &-cost {
+          &-title {
+            font-size: 14px;
+            line-height: 138.6%;
+          }
+
+          &-text {
+            margin-top: 11px;
+
+            font-size: 15px;
+            line-height: 135.84%;
+          }
+        }
+      }
+    }
+  }
+}
